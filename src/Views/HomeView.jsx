@@ -1,7 +1,7 @@
 function HomeView(){
     return(
         <>
-            <div>Home Page</div>
+            <div className="bg-primary">Home Page</div>
         </>
     )
 }
