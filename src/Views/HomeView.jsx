@@ -1,4 +1,5 @@
 import { Navbar } from '../components/index'
+import imgen from '../assets/image/img_3.png' 
 function HomeView(){
     return(
         <>
@@ -6,7 +7,7 @@ function HomeView(){
             <div className="row main-container">
             <div className="main">
                 <div className="images">
-                    <img src="img_3.png" alt="" className="img-w" />
+                    <img src={imgen} alt="" className="img-w" />
                 </div>
                 <div className="detail">
                     <h3>Hi, I&#39;m</h3>
