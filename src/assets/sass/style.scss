@@ -5,15 +5,24 @@
     --primary-color: #33383C;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+    width: 100%;
     font-family: 'Outfit', sans-serif;
     background: linear-gradient(161.5deg, #33383C 50%, #fff 50%);
     height: 100vh;
     color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar{
+  height: 80px;
 }
