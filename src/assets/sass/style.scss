@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary-color: #33383C;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(161.5deg, #33383C 50%, #fff 50%);
+    height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar{
+  height: 80px;
+}
