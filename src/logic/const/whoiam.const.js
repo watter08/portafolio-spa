@@ -1,4 +1,8 @@
 export const WhoIAm = {
+    Message: {
+        Title: 'Quien Soy', 
+        TitleEng: 'Who I Am'
+    },
     Name: {
         Title: 'Watter', 
         TitleEng: 'Watter'

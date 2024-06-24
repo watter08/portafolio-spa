@@ -1,7 +1,6 @@
 import  { useState } from 'react';
 import PropTypes from 'prop-types';
 
-// Componente para mostrar cada item de información
 const InfoItem = ({ label, value }) => (
     <div className="info-item">
         <span className="info-label">{label}:</span>
@@ -17,8 +16,7 @@ InfoItem.propTypes = {
     ]).isRequired,
 };
 
-// Componente que recibe el objeto como propiedad y muestra la información
-const DynamicInfoDisplay = ({ data }) => {
+const DynamicInfoDisplay = ({ data, currentLanguage }) => {
     return (
         <div className="info-container">
             {Object.keys(data).map(key => (
@@ -27,11 +25,11 @@ const DynamicInfoDisplay = ({ data }) => {
                     label={key}
                     value={
                         data[key].Title.startsWith('http') ? (
-                            <a href={data[key].Title} target="_blank" rel="noopener noreferrer">
-                                {data[key].Title}
+                            <a href={data[key][currentLanguage]} target="_blank" rel="noopener noreferrer">
+                                {data[key][currentLanguage]}
                             </a>
                         ) : (
-                            data[key].Title
+                            data[key][currentLanguage]
                         )
                     }
                 />
@@ -47,17 +45,16 @@ DynamicInfoDisplay.propTypes = {
             TitleEng: PropTypes.string.isRequired
         })
     ).isRequired,
+    currentLanguage: PropTypes.string
 };
 
-// Componente principal que utiliza el componente DynamicInfoDisplay
-const App = ({ whoIAmData }) => {
+const App = ({ whoIAmData, currentLanguage }) => {
     const [isVisible] = useState(false);
-
-
+    const { Message, ...data } = whoIAmData;
     return (
         <div className={`app p-5 mt-5  ${isVisible ? 'visible' : ''}`}>
-            <h1>Who I Am</h1>
-            <DynamicInfoDisplay data={whoIAmData} />
+            <h1>{Message[currentLanguage]}</h1>
+            <DynamicInfoDisplay data={data} currentLanguage={currentLanguage} />
         </div>
     );
 };
@@ -69,6 +66,7 @@ App.propTypes = {
             TitleEng: PropTypes.string.isRequired
         })
     ).isRequired,
+    currentLanguage: PropTypes.string
 };
 
 export default App;

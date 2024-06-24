@@ -9,8 +9,7 @@ function HomeView(){
             <div className="container-shape">
                 <Navbar className="position-absolute" setCurrentLenguageParent={setCurrentLenguage} />
                 <ShapeHeader />
-                <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} key={currentLenguage} />
-            
+                <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} />
             </div>            
         </div>
     )
