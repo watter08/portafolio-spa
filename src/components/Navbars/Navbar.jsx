@@ -1,24 +1,35 @@
-import {  useState } from "react"
+import { useState } from "react"
+import MappingNavbarLinks from "./MappingNavbarLinks"
 import { NavbarInit } from "../../logic/const/navbar.const"
-import { MappingNavbarLinks } from "../../logic/functions/HomeViewFunctions" 
+import { Lenguajes } from "../../logic/const/lenguajes.const"
+import MappingSelectOption from "./MappingSelectOption"
 
 function Navbar(){
     const [ navData ] = useState(NavbarInit)
+    const [ availableLenguajes ] = useState(Lenguajes)
+    const [ currentLenguaje, setCurrentLenguaje ] = useState('Title')
+
     return(
         <header className="row">
-            <nav className="navbar navbar-expand-lg bg-light pe-3 ps-3">
+            <nav className="navbar navbar-expand-lg navbar-light navbar-glass fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href={navData?.NavBrand?.Link}>{ navData?.NavBrand?.Title }</a>
+                    <a className="navbar-brand" href={navData?.NavBrand?.Link}>{ navData?.NavBrand[currentLenguaje] }</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        {MappingNavbarLinks(navData?.Links)}
+                        <MappingNavbarLinks Links={navData && navData?.Links ? navData?.Links : []} currentLenguaje={currentLenguaje} />
                     </ul>
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                    <form className="d-flex" role="search">                        
+                            <MappingSelectOption 
+                              Options={availableLenguajes} 
+                              currentLenguaje={currentLenguaje} 
+                              onChange={setCurrentLenguaje} 
+                            />
+                         
+                        <input className="form-control search-input-navbar me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-dark search-button-navbar" type="submit">Buscar</button>                        
                     </form>
                     </div>
                 </div>

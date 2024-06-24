@@ -1,40 +1,45 @@
 export const NavbarInit = {
     NavBrand : {
-        Title: 'Portafolio',
-        Link:'#'
+        Title: 'Inicio',
+        TitleEng: 'Home',
+        Link:'/'
     },
     Links:[
         {
            IsDropDown: false,
-           Title: 'Portafolio',
-           Link:'#',
+           Title: 'Resumen',
+           TitleEng: 'Resume',
+           Link:'#Resume',
            Drops:[] 
         },
         {
             IsDropDown: false,
-            Title: 'Hoja de Vida',
-            Link:'#',
+            Title: 'Certificados',
+            TitleEng: 'Certificates',
+            Link:'#Certificates',
             Drops:[] 
          },
          {
             IsDropDown: true,
             Title: 'Enlaces',
+            TitleEng: 'Links',
             Link:'#',
             Drops:[
                 {
                     IsDropDown: false,
                     Title: 'Portafolio',
+                    TitleEng: 'Briefcase',
                     Link:'#',
                     Drops:[] 
                  },
                  {
                      IsDropDown: false,
                      Title: 'Hoja de Vida',
+                     TitleEng: 'Curriculum Vitae',
                      Link:'#',
                      Drops:[] 
                   },
             ] 
-         }
-    
+         }    
     ]
 }

@@ -4,7 +4,6 @@
 :root {
     --primary-color: #33383C;
 }
-
 *,
 *:before,
 *:after {
@@ -15,14 +14,23 @@
 }
 
 body {
-    width: 100%;
-    font-family: 'Outfit', sans-serif;
-    background: linear-gradient(161.5deg, #33383C 50%, #fff 50%);
-    height: 100vh;
-    color: #ffffff;
-    overflow-x: hidden;
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #edf0f1; /* Color de fondo opcional */
 }
 
-.navbar{
-  height: 80px;
+.content {
+  max-width: 1600px; /* Ancho máximo deseado */
+  width: 100%;
+  padding: 20px; /* Añade un espacio interno al contenido */
+  background-color: #ffffff; /* Color de fondo del contenido */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

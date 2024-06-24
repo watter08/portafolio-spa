@@ -1,5 +1,7 @@
 
 .containerSlider {
+  max-width: 1600px;
+  width: 100%;
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -8,13 +10,13 @@
 .slider {
   display: flex;
   width: 500%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   transition: all 0.25s ease-in;
   transform: translateX(0);
 }
 @media only screen and (max-width: 1000px) {
   .slider {
-    height: calc(100vh - 80px);
+    height: 100vh;
   }
 }
 .slider .box {
