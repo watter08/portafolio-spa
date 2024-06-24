@@ -4,6 +4,10 @@ export const NavbarInit = {
         TitleEng: 'Home',
         Link:'/'
     },
+    ButtonSearch:{
+        Title: 'Buscar',
+        TitleEng:'Search',
+    },
     Links:[
         {
            IsDropDown: false,

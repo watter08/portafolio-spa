@@ -22,15 +22,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #edf0f1; /* Color de fondo opcional */
 }
 
 .content {
-  max-width: 1600px; /* Ancho máximo deseado */
+  max-width: 100%; 
   width: 100%;
-  padding: 20px; /* Añade un espacio interno al contenido */
-  background-color: #ffffff; /* Color de fondo del contenido */
+  padding: 20px; 
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-shape {
+  position: relative;
+  background-image: linear-gradient( 178.7deg,  rgba(126,184,253,1) 5.6%, rgba(2,71,157,1) 95.3% );
+  min-width: 100vw;
+  min-height: 100vh;
 }
