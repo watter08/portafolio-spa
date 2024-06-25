@@ -1,0 +1,44 @@
+.whoiam {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(20px);
+    opacity: 0;
+    text-align: center;
+}
+
+.whoiam.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.info-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-value a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.info-value a:hover {
+    color: #0056b3;
+}
