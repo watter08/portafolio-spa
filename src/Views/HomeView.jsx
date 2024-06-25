@@ -19,7 +19,7 @@ function HomeView(){
                 <ShapeHeader />
             </div>  
 
-            <div className="row position-relative pt-5 mt-5">
+            <div className="row position-relative pt-5 mt-5 pb-5 mb-5">
                 <div className="embla-containers">
                     <EmblaCarousel 
                     currentLenguaje={currentLenguage} 

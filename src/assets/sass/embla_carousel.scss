@@ -1,7 +1,7 @@
 .embla {
-    max-width: 48rem;
+    max-width: 65rem;
     margin: auto;
-    --slide-height: 37rem;
+    --slide-height: 45rem;
     --slide-spacing: 1rem;
     --slide-size: 100%;
   }
@@ -28,14 +28,16 @@
   }
   .embla__slide__subtitle{
     font-size: 22px;
+    padding-bottom: 20px;
   }
   .embla__slide__details{
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
+    padding-bottom: 20px;
   }
   .embla__slide__img{
     width: 100%;
-    height: 250px;
+    height: 280px;
     border-radius: 10px;
     object-fit: cover;
   }
