@@ -1,16 +1,24 @@
 import { useState } from 'react'
-import { Navbar,  ShapeHeader, GeneralInfo } from '../components/index'
-import { WhoIAm } from '../logic/const/whoiam.const'
+import { Navbar,  ShapeHeader, Presentation } from '../components/index'
+import { PresentationInfo } from '../logic/const/presentation.const';
 function HomeView(){
     const [ currentLenguage, setCurrentLenguage ] = useState('Title');
 
     return(
-        <div className='content container-fluid position-relative p-0 m-0'>
+        <div className='container-fluid position-relative p-0 m-0'>
             <div className="container-shape">
                 <Navbar className="position-absolute" setCurrentLenguageParent={setCurrentLenguage} />
-                <ShapeHeader />
-                <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} />
+
+                <Presentation 
+                About={PresentationInfo.About} 
+                ImageUrl={PresentationInfo.ImageUrl} 
+                CurrentLanguage={currentLenguage} 
+                key="Presentation" />
+
+                
+                {/* <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} /> */}
                 {/* <ImageSlide /> */}
+                <ShapeHeader />
             </div>            
         </div>
     )

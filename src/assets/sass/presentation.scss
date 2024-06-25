@@ -1,0 +1,29 @@
+.presentation-container {   
+    width: 100%; 
+    display: flex;
+    padding: 100px 20px;
+    
+}
+
+.presentation-info {
+    flex: 80%;
+    font-size: 30px;
+    font-family: 'Poppins', 'Outfit', sans-serif;
+    text-align: left;
+}
+
+.presentation-img {
+    flex: 20%;
+}
+
+@media (max-width: 600px) {
+    .presentation-container {
+        flex-flow: column-reverse;
+        margin: 0 auto;
+    }
+    .presentation-info{
+        font-size: 20px;
+        padding: 30px;
+        margin: 0 auto;
+    }
+}

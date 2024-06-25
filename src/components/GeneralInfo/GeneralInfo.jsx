@@ -52,7 +52,7 @@ const App = ({ whoIAmData, currentLanguage }) => {
     const [isVisible] = useState(false);
     const { Message, ...data } = whoIAmData;
     return (
-        <div className={`app p-5 mt-5  ${isVisible ? 'visible' : ''}`}>
+        <div className={`whoiam p-5 mt-5  ${isVisible ? 'visible' : ''}`}>
             <h1>{Message[currentLanguage]}</h1>
             <DynamicInfoDisplay data={data} currentLanguage={currentLanguage} />
         </div>
