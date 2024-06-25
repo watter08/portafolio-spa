@@ -1,9 +1,20 @@
+import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap'
 import PropTypes from 'prop-types';
 import UserImg from '../../assets/image/profile.png'
-import { useEffect, useState } from 'react';
+
 
 function Presentation({ About, ImageUrl, CurrentLanguage = 'Title' }){
     const [  userImage, setUserImage ] = useState(UserImg);
+    const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(boxRef.current, 
+      { x: '-100%', opacity: 0 }, 
+      { x: '0%', opacity: 1, duration: 2, ease: 'power3.out' }
+    );
+  }, []);
+
 
     useEffect(() => {
         if(ImageUrl){
@@ -14,7 +25,7 @@ function Presentation({ About, ImageUrl, CurrentLanguage = 'Title' }){
 
     return(
         <div className="row">
-            <div className="content  mx-auto presentation-container">
+            <div ref={boxRef} className="content box mx-auto presentation-container">
                 <div className="presentation-info">
                     <span>{About[CurrentLanguage]}</span>
                 </div>

@@ -2,12 +2,13 @@
     width: 100%; 
     display: flex;
     padding: 100px 20px;
+    color: #ffffff;
     
 }
 
 .presentation-info {
     flex: 80%;
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Poppins', 'Outfit', sans-serif;
     text-align: left;
 }
@@ -16,6 +17,11 @@
     flex: 20%;
 }
 
+.presentation-img img {
+    filter: drop-shadow(
+        0 0 10px rgba(0, 0, 0, .8)
+    )
+}
 @media (max-width: 600px) {
     .presentation-container {
         flex-flow: column-reverse;
