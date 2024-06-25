@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navbar,  ShapeHeader, Presentation } from '../components/index'
+import { Navbar,  ShapeHeader, Presentation, ImageSlide } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 function HomeView(){
     const [ currentLenguage, setCurrentLenguage ] = useState('Title');
@@ -13,13 +13,11 @@ function HomeView(){
                 About={PresentationInfo.About} 
                 ImageUrl={PresentationInfo.ImageUrl} 
                 CurrentLanguage={currentLenguage} 
-                key="Presentation" />
-
-                
+                key="Presentation" />                
                 {/* <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} /> */}
-                {/* <ImageSlide /> */}
                 <ShapeHeader />
-            </div>            
+            </div>  
+            <ImageSlide />          
         </div>
     )
 }
