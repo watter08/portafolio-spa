@@ -10,6 +10,7 @@ function HomeView(){
                 <Navbar className="position-absolute" setCurrentLenguageParent={setCurrentLenguage} />
                 <ShapeHeader />
                 <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} />
+                {/* <ImageSlide /> */}
             </div>            
         </div>
     )
