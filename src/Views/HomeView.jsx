@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navbar,  ShapeHeader, Presentation, ImageSlide, EmblaCarousel } from '../components/index'
+import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
 
@@ -18,7 +18,6 @@ function HomeView(){
                     key="Presentation" />                   
                 <ShapeHeader />
             </div>  
-            {/* <ImageSlide />       */}
 
             <div className="row position-relative pt-5 mt-5">
                 <div className="embla-containers">
