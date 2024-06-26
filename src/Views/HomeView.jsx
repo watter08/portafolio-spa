@@ -6,11 +6,16 @@ import { ProjectsWorked } from '../logic/const/projects.const'
 function HomeView(){
     const [ currentLenguage, setCurrentLenguage ] = useState('Title');
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
+    const [ currentTheme, setCurrentTheme ] = useState('Title')
 
     return(
         <div className='container-fluid position-relative p-0 m-0'>
             <div className="container-shape">
-                <Navbar className="position-absolute" setCurrentLenguageParent={setCurrentLenguage} />
+                <Navbar 
+                    className="position-absolute" 
+                    setCurrentLenguageParent={setCurrentLenguage}
+                    setCurrentThemeParent={setCurrentTheme} 
+                    />
                 <Presentation 
                     About={PresentationInfo.About} 
                     ImageUrl={PresentationInfo.ImageUrl} 

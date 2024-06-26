@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 
-const MappingSelectOption = ({ Options = [], currentLenguaje = 'Title', onChange }) => (
-  <select className="form-select lenguaje-select me-1" aria-label="lenguaje select" onChange={e => onChange(e.target.value)} value={currentLenguaje}>
+const MappingSelectOption = ({ Options = [], currentLenguaje = 'Title', onChange, Index }) => (
+  <select className="form-select lenguaje-select me-1" aria-label="lenguaje select" onChange={e => onChange(e.target.value, Index)} value={currentLenguaje}>
     {Options && Options.length > 0 ? (
-      Options.map(option => (
+      Options.map((option , index) => (
         <option 
-          key={`${option[currentLenguaje]}_1`} 
+          className="lenguaje-select-option"
+          key={`${option[currentLenguaje]}_${index}`} 
           value={option.Key}
         >
           {option[currentLenguaje]}
@@ -24,11 +25,13 @@ MappingSelectOption.propTypes = {
   })).isRequired,
   currentLenguaje: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  Index: PropTypes.number
 };
 
 MappingSelectOption.defaultProps = {
   Options: [],
   currentLenguaje: 'Title',
+  Index: -5
 };
 
 export default MappingSelectOption;
