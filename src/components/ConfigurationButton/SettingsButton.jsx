@@ -1,7 +1,7 @@
 import MappingSelectOption from "../Navbars/MappingSelectOption"
 import PropTypes from 'prop-types';
 
-const SettingsButton = ({ SelectConfiguration, ConfigurationLabel, CurrentLanguage }) => {
+const SettingsButton = ({ SelectConfiguration, ConfigurationLabel }) => {
   return (
     <div className="dropdown me-1">
       <button
@@ -16,12 +16,12 @@ const SettingsButton = ({ SelectConfiguration, ConfigurationLabel, CurrentLangua
       <ul className="dropdown-menu" aria-labelledby="settingsDropdown">      
         {SelectConfiguration && SelectConfiguration.map((option, index) => (
             <li key={`SelectOptionConfigurationButton_${index}`} className="dropdown-item mb-3">                
-            <h4>{option?.Label[CurrentLanguage]}</h4>
+            <h4>{option?.Label}</h4>
             <MappingSelectOption 
             Options={option?.Options} 
-            currentLenguaje={option.value} 
             onChange={option?.onChange} 
             Index={index}
+            value={option?.value}
             /></li>
         ))
         }
@@ -34,25 +34,20 @@ const SettingsButton = ({ SelectConfiguration, ConfigurationLabel, CurrentLangua
 SettingsButton.propTypes = {
     SelectConfiguration: PropTypes.arrayOf(PropTypes.shape({
         Options: PropTypes.arrayOf(PropTypes.shape({
-            Key: PropTypes.string.isRequired,
-            Title: PropTypes.string.isRequired,
-          })).isRequired,
-          currentLenguaje: PropTypes.string,
-          onChange: PropTypes.func.isRequired,
-          Label: PropTypes.shape({
+            Key: PropTypes.string,
             Title: PropTypes.string,
-            TitleEng: PropTypes.string
-          }),
+          })),
+          currentLenguaje: PropTypes.string,
+          onChange: PropTypes.func,
+          Label: PropTypes.string,
           value: PropTypes.string
     })),
     ConfigurationLabel: PropTypes.string,
-    CurrentLanguage: PropTypes.string
 };
 
 MappingSelectOption.defaultProps = {
     SelectConfiguration: [],
     ConfigurationLabel: '',
-    CurrentLanguage: 'Title'
   };
   
 export default SettingsButton

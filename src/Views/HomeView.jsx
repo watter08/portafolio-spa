@@ -1,13 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
+import { headers, data } from '../logic/const/certificates.const'
 
 
 function HomeView(){
-    const [ currentLenguage, setCurrentLenguage ] = useState('Title');
+    const [ currentLenguage, setCurrentLenguage ] = useState('ES');
+    const [presentation, setPresentation] = useState({});
+    const [projects, setProjets] = useState([]);
+    const [certificateheaders, setCertificateheaders] = useState([]);
+    const [certificateData, setCertificateData] = useState([]);
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
-    const [ currentTheme, setCurrentTheme ] = useState('Title')
+    const [ currentTheme, setCurrentTheme ] = useState('SuperMan')
+
+    useEffect(() => {
+        if(currentLenguage){
+            let newPresentation = presentation;
+            newPresentation = PresentationInfo[currentLenguage];
+            setPresentation(newPresentation)
+
+            let newProjects = projects;
+            newProjects = ProjectsWorked[currentLenguage];
+            setProjets(newProjects)
+
+            let newHeaders = certificateheaders;
+            newHeaders = headers[currentLenguage];
+            setCertificateheaders(newHeaders)
+
+            let newData = certificateData;
+            newData = data[currentLenguage];
+            setCertificateData(newData)
+        }
+    },[currentLenguage])
 
     return(
         <div className='container-fluid position-relative p-0 m-0'>
@@ -18,8 +43,8 @@ function HomeView(){
                     setCurrentThemeParent={setCurrentTheme} 
                     />
                 <Presentation 
-                    About={PresentationInfo.About} 
-                    ImageUrl={PresentationInfo.ImageUrl} 
+                    About={presentation?.About} 
+                    ImageUrl={presentation?.ImageUrl} 
                     CurrentLanguage={currentLenguage} 
                     key="Presentation" />                   
                 <ShapeHeader />
@@ -29,7 +54,7 @@ function HomeView(){
                 <div className="embla-containers">
                     <EmblaCarousel 
                     currentLenguaje={currentLenguage} 
-                    slides={ProjectsWorked} 
+                    slides={projects} 
                     options={Options} 
                     key="EmblaCarouselHome"
                     /> 
@@ -37,7 +62,7 @@ function HomeView(){
             </div>
             
             <div className="row certificate-container">
-                <CertificateSection />
+                <CertificateSection header={certificateheaders} data={certificateData} />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br />
             

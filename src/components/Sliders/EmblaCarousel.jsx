@@ -8,7 +8,7 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const EmblaCarousel = ({ slides, options, currentLenguaje }) => {
+const EmblaCarousel = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -37,9 +37,9 @@ const EmblaCarousel = ({ slides, options, currentLenguaje }) => {
           {slides.map((slide ,index) => (
             <div className="embla__slide" key={index}>
               {/* <div className="embla__slide__number">{index + 1}</div> */}
-              <h3 className="embla__slide__title">{slide?.Title[currentLenguaje]}</h3>
-              <h4 className="embla__slide__subtitle">{slide?.SubTitle[currentLenguaje]}</h4>
-              <h6 className="embla__slide__details">{slide?.Details[currentLenguaje]}</h6>
+              <h3 className="embla__slide__title">{slide?.Title}</h3>
+              <h4 className="embla__slide__subtitle">{slide?.SubTitle}</h4>
+              <h6 className="embla__slide__details">{slide?.Details}</h6>
               <img className="embla__slide__img" src={slide?.Image} alt="" />
             </div>
           ))}
@@ -56,29 +56,11 @@ const EmblaCarousel = ({ slides, options, currentLenguaje }) => {
   )
 }
 
-
-// <div className="embla__slide" key={`slide_${index}`}>
-//             <h3 className="embla-title">{slide?.Title[currentLenguaje]}</h3>
-//             <h4 className="embla-subtitle">{slide?.SubTitle[currentLenguaje]}</h4>
-//             <h6 className="embla-details">{slide?.Details[currentLenguaje]}</h6>
-//             <img className="embla-img" src={slide?.Image[currentLenguaje]} alt="" />
-//           </div>
-
-
 EmblaCarousel.propTypes = {
     slides: PropTypes.arrayOf(PropTypes.shape({
-        Title: PropTypes.shape({
-            Title: PropTypes.string,
-            TitleEng: PropTypes.string
-        }),
-        SubTitle: PropTypes.shape({
-            Title: PropTypes.string,
-            TitleEng: PropTypes.string
-        }),
-        Details: PropTypes.shape({
-            Title: PropTypes.string,
-            TitleEng: PropTypes.string
-        }),
+        Title:  PropTypes.string,
+        SubTitle: PropTypes.string,
+        Details: PropTypes.string,
         Image: PropTypes.string
     })),
     options: PropTypes.shape({
@@ -87,13 +69,11 @@ EmblaCarousel.propTypes = {
         direction: PropTypes.string,
         loop: PropTypes.bool,
     }),
-    currentLenguaje: PropTypes.string
   };
   
   EmblaCarousel.defaultProps = {
     slides: [],
     options: {},
-    currentLenguaje: 'Title',
   };
 
 export default EmblaCarousel

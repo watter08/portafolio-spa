@@ -78,11 +78,11 @@ const DataTableComponent = ({ headers, data, rowsPerPage, rowsPerPageOptions, st
                     }}
                 />                
             </div>
-            <table className="data-table__table">
+            <table className="table table-striped data-table__table table-responsive">
                 <thead>
                     <tr>
                         {headers.map(header => (
-                            <th  key={header.key}>{header.value}</th>
+                            <th scope="col"  key={header.key}>{header.value}</th>
                         ))}
                     </tr>
                 </thead>
