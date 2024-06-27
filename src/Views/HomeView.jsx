@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel } from '../components/index'
+import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
+
 
 function HomeView(){
     const [ currentLenguage, setCurrentLenguage ] = useState('Title');
@@ -34,7 +35,12 @@ function HomeView(){
                     /> 
                 </div>
             </div>
-               
+            
+            <div className="row certificate-container">
+                <CertificateSection />
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+            
             {/* <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} /> */}
         </div>
     )
