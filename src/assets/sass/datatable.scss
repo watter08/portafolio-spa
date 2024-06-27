@@ -1,9 +1,8 @@
 .data-table {
-    width: 100%;
     margin: auto;
     box-sizing: border-box;
     padding: 4em;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -54,8 +53,7 @@
 .data-table__table th, .data-table__table td {
     padding: 0.5rem;
     text-align: left;
-    border: 1px solid #ccc;
-    white-space: nowrap;
+    // border: 1px solid #ccc;
 }
 
 .data-table__table th {    

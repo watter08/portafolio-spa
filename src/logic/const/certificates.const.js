@@ -16,209 +16,236 @@ export const CertificateList = [
     "Profile.pdf"
 ]
 
-export const CertificatesInfoList = [
-    {
-        Title: {
-            Title: 'Angular Básico',
-            TitleEng: 'Angular Basic'
+export const data = {
+    ES:[
+        {
+            Title:'Angular Básico',
+            Details: 'Curso introductorio a Angular. Cubre conceptos básicos como componentes, servicios y enrutamiento.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Angula_Basic.pdf',
+            Image: '/src/assets/certificates/icons/angular.png'
         },
-        Details: {
-            Title: 'Curso introductorio a Angular. Cubre conceptos básicos como componentes, servicios y enrutamiento.',
-            TitleEng: 'Introductory course to Angular covering basic concepts such as components, services, and routing.'
+        {
+            Title:'Angular Intermedio',
+            Details: 'Curso intermedio de Angular. Profundiza en temas avanzados como directivas, observables y optimización de rendimiento.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Angular_Intermediate.pdf',
+            Image: '/src/assets/certificates/icons/angular.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Angula_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'Angular Intermedio',
-            TitleEng: 'Angular Intermediate'
+        {
+            Title:'C# Básico',
+            Details: 'Curso introductorio a C#. Cubre conceptos fundamentales como tipos de datos, estructuras de control y clases básicas.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/CSharp_Basic.pdf',
+            Image: '/src/assets/certificates/icons/csharp.png'
         },
-        Details: {
-            Title: 'Curso intermedio de Angular. Profundiza en temas avanzados como directivas, observables y optimización de rendimiento.',
-            TitleEng: 'Intermediate Angular course. Dives into advanced topics such as directives, observables, and performance optimization.'
+        {
+            Title:'Desarrollador Frontend con React',
+            Details: 'Curso completo de desarrollo frontend con React. Incluye componentes, estado, efectos secundarios y rutas con React Router.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/FrontEnd_Developer_React.pdf',
+            Image:'/src/assets/certificates/icons/react.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Angular_Intermediate.pdf'
-    },
-    {
-        Title: {
-            Title: 'C# Básico',
-            TitleEng: 'C# Basic'
+        {
+            Title:'JavaScript Básico',
+            Details: 'Curso introductorio a JavaScript. Cubre conceptos básicos como variables, funciones y estructuras de control.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Javascript_Basic.pdf',
+            Image:'/src/assets/certificates/icons/javascript.png'
         },
-        Details: {
-            Title: 'Curso introductorio a C#. Cubre conceptos fundamentales como tipos de datos, estructuras de control y clases básicas.',
-            TitleEng: 'Introductory course to C#. Covers fundamental concepts such as data types, control structures, and basic classes.'
+        {
+            Title:'Introducción y Diseño de Base de Datos',
+            Details: 'Curso introductorio al diseño de bases de datos. Explora modelos de datos, normalización y diseño de esquemas.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Introduccion_y_Diseño_de_Base_de_Datos.pdf',
+            Image:'/src/assets/certificates/icons/oracle.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/CSharp_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'Desarrollador Frontend con React',
-            TitleEng: 'FrontEnd Developer React'
+        {
+            Title:'JavaScript Intermedio',
+            Details: 'Curso intermedio de JavaScript. Profundiza en temas avanzados como objetos, funciones de orden superior y manejo de errores.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Javascript_Intermediate.pdf',
+            Image:'/src/assets/certificates/icons/javascript.png'
         },
-        Details: {
-            Title: 'Curso completo de desarrollo frontend con React. Incluye componentes, estado, efectos secundarios y rutas con React Router.',
-            TitleEng: 'Comprehensive frontend development course with React. Includes components, state management, side effects, and routing with React Router.'
+        {
+            Title:'Node.js Básico',
+            Details: 'Curso introductorio a Node.js. Cubre conceptos fundamentales como el modelo de eventos, el sistema de archivos y Express.js.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/NodeJS_Basic.pdf',
+            Image:'/src/assets/certificates/icons/nodejs.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/FrontEnd_Developer_React.pdf'
-    },
-    {
-        Title: {
-            Title: 'Introducción y Diseño de Base de Datos',
-            TitleEng: 'Introduction and Database Design'
+        {
+            Title:'React Básico',
+            Details: 'Curso introductorio a React. Incluye componentes funcionales, clases de componentes, estado y manejo de eventos.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/React_Basic.pdf',
+            Image:'/src/assets/certificates/icons/react.png'
         },
-        Details: {
-            Title: 'Curso introductorio al diseño de bases de datos. Explora modelos de datos, normalización y diseño de esquemas.',
-            TitleEng: 'Introductory course to database design. Explores data models, normalization, and schema design.'
+        {
+            Title:'Redes y Cableados',
+            Details: 'Curso introductorio a redes y cableados. Explora configuraciones de red, tipos de cableado y troubleshooting básico.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Redes_y_Cableados.pdf',
+            Image:'/src/assets/certificates/icons/redes.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Introduccion_y_Diseño_de_Base_de_Datos.pdf'
-    },
-    {
-        Title: {
-            Title: 'JavaScript Básico',
-            TitleEng: 'JavaScript Basic'
+        {
+            Title:'SQL Básico',
+            Details: 'Curso introductorio a SQL. Cubre conceptos básicos como consultas SELECT, INSERT, UPDATE y DELETE.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Sql_Basic.pdf',
+            Image:'/src/assets/certificates/icons/sql.png'
         },
-        Details: {
-            Title: 'Curso introductorio a JavaScript. Cubre conceptos básicos como variables, funciones y estructuras de control.',
-            TitleEng: 'Introductory course to JavaScript. Covers basic concepts such as variables, functions, and control structures.'
+        {
+            Title:'SQL Intermedio',
+            Details: 'Curso intermedio de SQL. Profundiza en consultas avanzadas, funciones de agregación y optimización de consultas.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Sql_Intermediate.pdf',
+            Image:'/src/assets/certificates/icons/sql.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Javascript_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'JavaScript Intermedio',
-            TitleEng: 'JavaScript Intermediate'
+        {
+            Title:'Técnico de IT',
+            Details: 'Certificado de Técnico de IT. Acredita conocimientos en hardware, software y mantenimiento de sistemas informáticos.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/IT_Technician.jpeg',
+            Image:'/src/assets/certificates/icons/it.png'
         },
-        Details: {
-            Title: 'Curso intermedio de JavaScript. Profundiza en temas avanzados como objetos, funciones de orden superior y manejo de errores.',
-            TitleEng: 'Intermediate JavaScript course. Dives into advanced topics such as objects, higher-order functions, and error handling.'
+        {
+            Title:'Hoja de Vida',
+            Details: 'Currículum vitae de Watter. Resumen profesional y experiencia laboral en el campo de la tecnología y desarrollo de software.',
+            Platform: 'Experiencias',
+            Link:'/src/assets/certificates/Watter\'s_Resume.pdf',
+            Image:'/src/assets/certificates/icons/resume.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Javascript_Intermediate.pdf'
-    },
-    {
-        Title: {
-            Title: 'Node.js Básico',
-            TitleEng: 'Node.js Basic'
+        {
+            Title:'Perfil',
+            Details: 'Perfil profesional. Información detallada sobre habilidades, experiencia y logros profesionales.',
+            Platform: 'HackerRank',
+            Link:'/src/assets/certificates/Profile.pdf',
+            Image:'/src/assets/certificates/icons/resume.png'
+        }
+    ],
+    EN:[
+        {
+            Title: 'Angular Basic',
+            Details: 'Introductory course to Angular. Covers basic concepts such as components, services, and routing.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Angula_Basic.pdf',
+            Image: '/src/assets/certificates/icons/angular.png'
         },
-        Details: {
-            Title: 'Curso introductorio a Node.js. Cubre conceptos fundamentales como el modelo de eventos, el sistema de archivos y Express.js.',
-            TitleEng: 'Introductory course to Node.js. Covers fundamental concepts such as event-driven architecture, file system, and Express.js.'
+        {
+            Title: 'Angular Intermediate',
+            Details: 'Intermediate course on Angular. Delves into advanced topics such as directives, observables, and performance optimization.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Angular_Intermediate.pdf',
+            Image: '/src/assets/certificates/icons/angular.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/NodeJS_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'React Básico',
-            TitleEng: 'React Basic'
+        {
+            Title: 'C# Basic',
+            Details: 'Introductory course to C#. Covers fundamental concepts such as data types, control structures, and basic classes.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/CSharp_Basic.pdf',
+            Image: '/src/assets/certificates/icons/c#.png'
         },
-        Details: {
-            Title: 'Curso introductorio a React. Incluye componentes funcionales, clases de componentes, estado y manejo de eventos.',
-            TitleEng: 'Introductory course to React. Includes functional components, class components, state management, and event handling.'
+        {
+            Title: 'Frontend Developer with React',
+            Details: 'Comprehensive course on frontend development with React. Includes components, state, side effects, and routing with React Router.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/FrontEnd_Developer_React.pdf',
+            Image: '/src/assets/certificates/icons/react.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/React_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'Redes y Cableados',
-            TitleEng: 'Networking and Cabling'
+        {
+            Title: 'JavaScript Basic',
+            Details: 'Introductory course to JavaScript. Covers basic concepts such as variables, functions, and control structures.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Javascript_Basic.pdf',
+            Image: '/src/assets/certificates/icons/javascript.png'
         },
-        Details: {
-            Title: 'Curso introductorio a redes y cableados. Explora configuraciones de red, tipos de cableado y troubleshooting básico.',
-            TitleEng: 'Introductory course to networking and cabling. Explores network configurations, types of cabling, and basic troubleshooting.'
+        {
+            Title: 'Introduction to Database Design',
+            Details: 'Introductory course to database design. Explores data models, normalization, and schema design.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Introduccion_y_Diseño_de_Base_de_Datos.pdf',
+            Image: '/src/assets/certificates/icons/oracle.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Redes_y_Cableados.pdf'
-    },
-    {
-        Title: {
-            Title: 'SQL Básico',
-            TitleEng: 'SQL Basic'
+        {
+            Title: 'JavaScript Intermediate',
+            Details: 'Intermediate course on JavaScript. Delves into advanced topics such as objects, higher-order functions, and error handling.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Javascript_Intermediate.pdf',
+            Image: '/src/assets/certificates/icons/javascript.png'
         },
-        Details: {
-            Title: 'Curso introductorio a SQL. Cubre conceptos básicos como consultas SELECT, INSERT, UPDATE y DELETE.',
-            TitleEng: 'Introductory course to SQL. Covers basic concepts such as SELECT, INSERT, UPDATE, and DELETE queries.'
+        {
+            Title: 'Node.js Basic',
+            Details: 'Introductory course to Node.js. Covers fundamental concepts such as the event model, file system, and Express.js.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/NodeJS_Basic.pdf',
+            Image: '/src/assets/certificates/icons/nodejs.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Sql_Basic.pdf'
-    },
-    {
-        Title: {
-            Title: 'SQL Intermedio',
-            TitleEng: 'SQL Intermediate'
+        {
+            Title: 'React Basic',
+            Details: 'Introductory course to React. Includes functional components, class components, state, and event handling.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/React_Basic.pdf',
+            Image: '/src/assets/certificates/icons/react.png'
         },
-        Details: {
-            Title: 'Curso intermedio de SQL. Profundiza en consultas avanzadas, funciones de agregación y optimización de consultas.',
-            TitleEng: 'Intermediate SQL course. Dives into advanced queries, aggregation functions, and query optimization.'
+        {
+            Title: 'Networking and Cabling',
+            Details: 'Introductory course to networking and cabling. Explores network configurations, cabling types, and basic troubleshooting.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Redes_y_Cableados.pdf',
+            Image: '/src/assets/certificates/icons/redes.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Sql_Intermediate.pdf'
-    },
-    {
-        Title: {
-            Title: 'Técnico de IT',
-            TitleEng: 'IT Technician'
+        {
+            Title: 'SQL Basic',
+            Details: 'Introductory course to SQL. Covers basic concepts such as SELECT, INSERT, UPDATE, and DELETE queries.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Sql_Basic.pdf',
+            Image: '/src/assets/certificates/icons/sql.png'
         },
-        Details: {
-            Title: 'Certificado de Técnico de IT. Acredita conocimientos en hardware, software y mantenimiento de sistemas informáticos.',
-            TitleEng: 'IT Technician certificate. Accredited knowledge in hardware, software, and maintenance of computer systems.'
+        {
+            Title: 'SQL Intermediate',
+            Details: 'Intermediate course on SQL. Delves into advanced queries, aggregation functions, and query optimization.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Sql_Intermediate.pdf',
+            Image: '/src/assets/certificates/icons/sql.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/IT_Technician.jpeg'
-    },
-    {
-        Title: {
-            Title: "Currículum de Watter's",
-            TitleEng: "Watter's Resume"
+        {
+            Title: 'IT Technician',
+            Details: 'IT Technician certification. Validates knowledge in hardware, software, and computer systems maintenance.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/IT_Technician.jpeg',
+            Image: '/src/assets/certificates/icons/it.png'
         },
-        Details: {
-            Title: 'Currículum vitae de Watter. Resumen profesional y experiencia laboral en el campo de la tecnología y desarrollo de software.',
-            TitleEng: 'Watter\'s resume. Professional summary and work experience in the field of technology and software development.'
+        {
+            Title: 'Watter\'s Resume',
+            Details: 'Watter\'s professional resume. Overview of professional background and experience in technology and software development.',
+            Platform: 'Experiences',
+            Link: '/src/assets/certificates/Watter\'s_Resume.pdf',
+            Image: '/src/assets/certificates/icons/resume.png'
         },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Watter\'s_Resume.pdf'
-    },
-    {
-        Title: {
-            Title: 'Perfil',
-            TitleEng: 'Profile'
-        },
-        Details: {
-            Title: 'Perfil profesional. Información detallada sobre habilidades, experiencia y logros profesionales.',
-            TitleEng: 'Professional profile. Detailed information about skills, experience, and professional achievements.'
-        },
-        Platform: 'HackerRank',
-        Link: '/src/assets/certificates/Profile.pdf'
-    }
-];
+        {
+            Title: 'Profile',
+            Details: 'Professional profile. Detailed information about skills, experience, and professional achievements.',
+            Platform: 'HackerRank',
+            Link: '/src/assets/certificates/Profile.pdf',
+            Image: '/src/assets/certificates/icons/resume.png'
+        }
+    ]
+};
 
-
-
-export const headers = [
-    { key: 'id', value: 'ID', type: 'text' },
-    { key: 'name', value: 'Name', type: 'text' },
-    { key: 'email', value: 'Email', type: 'text' },
-    { key: 'age', value: 'Age', type: 'text' },
-    { key: 'profile', value: 'Profile', type: 'link' },
-    { key: 'avatar', value: 'Avatar', type: 'image' }
-];
-
-export const data = [
-    { id: 1, name: 'John Doe', email: 'john.doe@example.com', age: 30, profile: 'http://example.com/profile/johndoe', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', age: 25, profile: 'http://example.com/profile/janesmith', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 3, name: 'Mike Johnson', email: 'mike.johnson@example.com', age: 40, profile: 'http://example.com/profile/mikejohnson', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 4, name: 'Emily Davis', email: 'emily.davis@example.com', age: 35, profile: 'http://example.com/profile/emilydavis', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 5, name: 'Robert Brown', email: 'robert.brown@example.com', age: 28, profile: 'http://example.com/profile/robertbrown', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 6, name: 'Alice Johnson', email: 'alice.johnson@example.com', age: 32, profile: 'http://example.com/profile/alicejohnson', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 7, name: 'David Wilson', email: 'david.wilson@example.com', age: 29, profile: 'http://example.com/profile/davidwilson', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 8, name: 'Laura Moore', email: 'laura.moore@example.com', age: 34, profile: 'http://example.com/profile/lauramoore', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 9, name: 'James White', email: 'james.white@example.com', age: 31, profile: 'http://example.com/profile/jameswhite', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-    { id: 10, name: 'Sarah Taylor', email: 'sarah.taylor@example.com', age: 26, profile: 'http://example.com/profile/sarahtaylor', avatar: 'https://www.pngitem.com/pimgs/m/0-6243_user-profile-avatar-scalable-vector-graphics-icon-woman.png' },
-];
+export const headers = {
+    ES:[
+        { key: 'Title', value: 'Titulo', type: 'text' },
+        { key: 'Details', value: 'Detalle', type: 'text' },
+        { key: 'Platform', value: 'Plataforma', type: 'text' },
+        { key: 'Link', value: 'Enlace', type: 'link' },
+        { key: 'Image', value: 'Icono', type: 'image' }
+    ],
+    EN:[
+        { key: 'Title', value: 'Title', type: 'text' },
+        { key: 'Details', value: 'Details', type: 'text' },
+        { key: 'Platform', value: 'Platform', type: 'text' },
+        { key: 'Link', value: 'Link', type: 'link' },
+        { key: 'Image', value: 'Icon', type: 'image' }
+    ]
+}

@@ -1,10 +1,7 @@
+import PropTypes from 'prop-types';
 import { DataTable } from '../'
-import { data, headers } from '../../logic/const/certificates.const'
 
-
-
-
-const CertificateSection = () => {
+const CertificateSection = ({ data = [], header = []}) => {
     return(
         <div className="position-relative">
             <div className="certificate-info">
@@ -13,10 +10,10 @@ const CertificateSection = () => {
                 <div className="content mx-auto position-relative">                    
                     <DataTable 
                     data={data} 
-                    headers={headers} 
+                    headers={header} 
                     rowsPerPage={5} 
                     rowsPerPageOptions={[5, 10, 15]} 
-                    styleClass=""
+                    styleClass="glass"
                     key="DatatableCertificateHome" 
                     />
                 </div>
@@ -26,5 +23,15 @@ const CertificateSection = () => {
         </div>                
     )
 }
+
+CertificateSection.propTypes = {
+    header : PropTypes.array,
+    data:PropTypes.array
+};
+  
+CertificateSection.defaultProps = {
+    data : () => [],
+    header:() => []
+};
 
 export default CertificateSection
