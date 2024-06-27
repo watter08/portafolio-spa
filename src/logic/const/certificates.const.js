@@ -144,7 +144,7 @@ export const data = {
             Details: 'Introductory course to C#. Covers fundamental concepts such as data types, control structures, and basic classes.',
             Platform: 'HackerRank',
             Link: '/src/assets/certificates/CSharp_Basic.pdf',
-            Image: '/src/assets/certificates/icons/c#.png'
+            Image: '/src/assets/certificates/icons/csharp.png'
         },
         {
             Title: 'Frontend Developer with React',

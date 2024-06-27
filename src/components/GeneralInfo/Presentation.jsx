@@ -34,7 +34,6 @@ function Presentation({ About, ImageUrl }){
 
 
     return(
-        <div className="row">
             <div ref={boxRef} className="content box mx-auto presentation-container">
                 <div className="presentation-info">
                     <span>{About}</span>
@@ -43,7 +42,6 @@ function Presentation({ About, ImageUrl }){
                     <img  width="300" src={userImage} alt="" />
                 </div>
             </div>
-        </div>
     )
 }
 
