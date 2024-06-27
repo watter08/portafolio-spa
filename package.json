@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "embla-carousel": "^8.1.5",
+    "embla-carousel-auto-scroll": "^8.1.5",
     "embla-carousel-autoplay": "^8.1.5",
     "embla-carousel-react": "^8.1.5",
     "gsap": "^3.12.5",

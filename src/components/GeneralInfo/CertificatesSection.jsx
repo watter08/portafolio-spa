@@ -18,7 +18,8 @@ const CertificateSection = ({ data = [], header = []}) => {
                     />
                 </div>
                 <div className="certificate-info">
-                    <p className="subtitle">Certificados y Hoja de Vida</p>
+                    <p className="subtitle lh-0 pb-0 mb-0">Certificados y Hoja de Vida</p>
+                    <p className="subtitle lh-0 pt-0 nt-0">Iconos Obtenidos desde <a className='text-dark' href="https://iconos8.es">Iconos 8</a></p>
                 </div>
         </div>                
     )
