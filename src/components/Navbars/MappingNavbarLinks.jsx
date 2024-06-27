@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const MappingDropLi = ({ Drops = [], currentLanguage = 'ES' }) => (
+const MappingDropLi = ({ Drops = []}) => (
   Drops.map((drop, index) => (
     <li key={`${drop?.Title}_${index}`}>
       <a className="dropdown-item" href={drop.Link || '#'}>{drop?.Title}</a>
@@ -14,15 +14,13 @@ MappingDropLi.propTypes = {
     Title: PropTypes.string,
     Key: PropTypes.string,
   })),
-  currentLanguage: PropTypes.string,
 };
 
 MappingDropLi.defaultProps = {
   Drops: [],
-  currentLanguage: 'ES',
 };
 
-const MappingNavbarLinks = ({ Links = [], currentLanguage = 'ES' }) => (
+const MappingNavbarLinks = ({ Links = []}) => (
    Links && Links?.length > 0 ? Links.map(link => (
       link && link.IsDropDown ? (
         <li className="nav-item dropdown" key={`${link}_1`}>
@@ -30,7 +28,7 @@ const MappingNavbarLinks = ({ Links = [], currentLanguage = 'ES' }) => (
             {link?.Title}
           </a>
           <ul className="dropdown-menu">
-            <MappingDropLi Drops={link && link?.Drops ? link.Drops : []} currentLanguage={currentLanguage} />
+            <MappingDropLi Drops={link && link?.Drops ? link.Drops : []} />
           </ul>
         </li>
       ) : (
@@ -51,13 +49,11 @@ MappingNavbarLinks.propTypes = {
       Title: PropTypes.string,
       Key: PropTypes.string,
     })),
-  })),
-  currentLanguage: PropTypes.string,
+  }))
 };
 
 MappingNavbarLinks.defaultProps = {
-  Links: [],
-  currentLanguage: 'Title',
+  Links: []
 };
 
 export default MappingNavbarLinks;

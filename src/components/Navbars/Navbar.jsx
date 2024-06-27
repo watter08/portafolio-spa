@@ -25,9 +25,39 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
 
             let newNavData = {...navData};
             newNavData = NavbarInit[currentLanguage];
-            setNavData(newNavData)          
+            setNavData(newNavData)     
+            
+            changeConfigurationInputsLanguage()
         }
     },[currentLanguage])
+
+    const changeConfigurationInputsLanguage = () => {
+        const newConfigurationInputs = [
+            {
+                Label: ConfigurationButtonInfo[currentLanguage].LanguageLabel,
+                onChange: handleCurrentLanguage,
+                Options: availableLanguages,
+                value: currentLanguage,
+            },
+            {
+                Label: ConfigurationButtonInfo[currentLanguage].ThemeLabel,
+                onChange: handleCurrentTheme,
+                Options: availableThemes,
+                value: currentTheme,
+            },
+        ];
+        setConfigurationInputs(newConfigurationInputs);
+    }
+
+    const handleCurrentLanguage = (language) => {
+        setCurrentLenguageParent(language);
+        setCurrentLanguage(language);
+    }
+
+    const handleCurrentTheme = (theme) => {
+        setCurrentTheme(theme);
+        setCurrentThemeParent(theme);
+    }
 
     // const handleConfigurationInputs = useCallback((value, index) => {
     //     setConfigurationInputs(prevInputs => {
@@ -38,6 +68,9 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
     //         return newInputs;
     //     });
     // }, []);
+
+
+    
     
     // const handleCurrentLanguage = useCallback((language, index) => {
     //     setCurrentLenguageParent(language);
@@ -83,14 +116,14 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <MappingNavbarLinks Links={navData && navData?.Links ? navData?.Links : []} currentLanguage={currentLanguage} />
+                            <MappingNavbarLinks Links={navData && navData?.Links ? navData?.Links : []} />
                         </ul>
                         <form className="d-flex" role="search">   
-                                {/* <SettingsButton 
+                                <SettingsButton 
                                     SelectConfiguration={configurationInputs}
-                                    ConfigurationLabel={ConfigurationButtonInfo?.ConfigurationLabel[currentLanguage]}
+                                    ConfigurationLabel={ConfigurationButtonInfo[currentLanguage]?.ConfigurationLabel}
                                     CurrentLanguage={currentLanguage}
-                                 />                                             */}
+                                 />                                            
                             <input className="form-control search-input-navbar me-2" type="search" placeholder="" aria-label="Search" />
                             <button className="btn btn-dark search-button-navbar" type="submit">{navData?.ButtonSearch}</button>                        
                         </form>
