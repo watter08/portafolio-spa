@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 const MappingDropLi = ({ Drops = [], currentLenguaje = 'Title' }) => (
-  Drops.map(drop => (
-    <li key={`${drop[currentLenguaje]}_1`}>
+  Drops.map((drop, index) => (
+    <li key={`${drop[currentLenguaje]}_${index}`}>
       <a className="dropdown-item" href={drop.Link || '#'}>{drop[currentLenguaje]}</a>
     </li>
   ))
