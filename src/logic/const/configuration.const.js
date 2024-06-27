@@ -9,7 +9,7 @@ export const ConfigurationButtonInfo = {
                 value: 'ES'
             },
             {
-                key: 'Español',
+                key: 'Ingles',
                 value: 'EN'
             }
         ],
@@ -19,8 +19,8 @@ export const ConfigurationButtonInfo = {
                 value: 'SuperMan'
             },
             {
-                key: 'Light',
-                value: 'SuperMan'
+                key: 'Oscuro',
+                value: 'Batman'
             }
         ]
     },
@@ -40,8 +40,8 @@ export const ConfigurationButtonInfo = {
         ],
         Themes: [
             {
-                key: 'Oscuro',
-                value: 'Batman'
+                key: 'Light',
+                value: 'SuperMan'
             },
             {
                 key: 'Dark',

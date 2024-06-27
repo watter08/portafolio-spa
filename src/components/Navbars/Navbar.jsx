@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import MappingNavbarLinks from "./MappingNavbarLinks"
 import SettingsButton from '../ConfigurationButton/SettingsButton'
 import { NavbarInit } from "../../logic/const/navbar.const"
@@ -15,11 +15,11 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
 
     useEffect(() => {
         if(currentLanguage){
-            let newAvailableLanguage = {...availableLanguages};
+            let newAvailableLanguage = availableLanguages;
             newAvailableLanguage = ConfigurationButtonInfo[currentLanguage].Languages; 
             setAvailableLanguages(newAvailableLanguage);
 
-            let newAvailableTheme = {...availableThemes};
+            let newAvailableTheme = availableThemes;
             newAvailableTheme = ConfigurationButtonInfo[currentLanguage].Themes;            
             setAvailableThemes(newAvailableTheme)
 
@@ -27,27 +27,20 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
             newNavData = NavbarInit[currentLanguage];
             setNavData(newNavData)     
             
-            changeConfigurationInputsLanguage()
+            changeConfigurationInputsLanguage(newAvailableLanguage , newAvailableTheme, currentLanguage, currentTheme)
         }
-    },[currentLanguage])
+    },[currentLanguage])    
 
-    const changeConfigurationInputsLanguage = () => {
-        const newConfigurationInputs = [
-            {
-                Label: ConfigurationButtonInfo[currentLanguage].LanguageLabel,
-                onChange: handleCurrentLanguage,
-                Options: availableLanguages,
-                value: currentLanguage,
-            },
-            {
-                Label: ConfigurationButtonInfo[currentLanguage].ThemeLabel,
-                onChange: handleCurrentTheme,
-                Options: availableThemes,
-                value: currentTheme,
-            },
-        ];
-        setConfigurationInputs(newConfigurationInputs);
-    }
+    useEffect(() => {
+        if(currentTheme && configurationInputs && configurationInputs?.length > 0){
+            let newConfigurationInputs = configurationInputs.map(({key,value,...rest}) => ({
+                ...rest, 
+                key,
+                value: key === 'theme' ? currentTheme: value
+        }));
+        setConfigurationInputs(newConfigurationInputs)
+        }
+    },[currentTheme])
 
     const handleCurrentLanguage = (language) => {
         setCurrentLenguageParent(language);
@@ -59,52 +52,25 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
         setCurrentThemeParent(theme);
     }
 
-    // const handleConfigurationInputs = useCallback((value, index) => {
-    //     setConfigurationInputs(prevInputs => {
-    //         const newInputs = [...prevInputs];
-    //         if (newInputs[index]) {
-    //             newInputs[index] = { ...newInputs[index], value };
-    //         }
-    //         return newInputs;
-    //     });
-    // }, []);
-
-
-    
-    
-    // const handleCurrentLanguage = useCallback((language, index) => {
-    //     setCurrentLenguageParent(language);
-    //     setCurrentLanguage(language);
-    //     handleConfigurationInputs(language, index);
-    // }, [setCurrentLanguage, handleConfigurationInputs]);
-
-    // const handleCurrentTheme = useCallback((theme, index) => {
-    //     setCurrentTheme(theme);
-    //     setCurrentThemeParent(theme);
-    //     handleConfigurationInputs(theme, index);
-    // }, [setCurrentTheme, handleConfigurationInputs]);
-
-    
-    
-    // useEffect(() => {
-    //     const newConfigurationInputs = [
-    //         {
-    //             Label: ConfigurationButtonInfo[currentLanguage].LanguageLabel,
-    //             onChange: handleCurrentLanguage,
-    //             Options: availableLanguages,
-    //             value: currentLanguage,
-    //         },
-    //         {
-    //             Label: ConfigurationButtonInfo[currentLanguage].ThemeLabel,
-    //             onChange: handleCurrentTheme,
-    //             Options: availableThemes,
-    //             value: currentTheme,
-    //         },
-    //     ];
-    //     setConfigurationInputs(newConfigurationInputs);
-    // }, [availableLanguages, availableThemes, handleCurrentLanguage, handleCurrentTheme, currentLanguage, currentTheme]);
-
-
+    const changeConfigurationInputsLanguage = (languages , themes, cLanguage , cTheme) => {
+        let newConfigurationInputs = [
+            {
+                Label: ConfigurationButtonInfo[cLanguage].LanguageLabel,
+                onChange: handleCurrentLanguage,
+                Options: languages,
+                value: cLanguage,
+                key:'language'
+            },
+            {
+                Label: ConfigurationButtonInfo[cLanguage].ThemeLabel,
+                onChange: handleCurrentTheme,
+                Options: themes,
+                value: cTheme,
+                key:'theme'
+            },
+        ];
+        setConfigurationInputs(newConfigurationInputs);
+    }
 
     return(
         <header className="row">
@@ -122,7 +88,6 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
                                 <SettingsButton 
                                     SelectConfiguration={configurationInputs}
                                     ConfigurationLabel={ConfigurationButtonInfo[currentLanguage]?.ConfigurationLabel}
-                                    CurrentLanguage={currentLanguage}
                                  />                                            
                             <input className="form-control search-input-navbar me-2" type="search" placeholder="" aria-label="Search" />
                             <button className="btn btn-dark search-button-navbar" type="submit">{navData?.ButtonSearch}</button>                        
