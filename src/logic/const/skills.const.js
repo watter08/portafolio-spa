@@ -30,9 +30,9 @@ export const skills = {
         title:'Habilidades y Competencias',
         skills:[
         { title: "C#", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" },
-        { title: "ASP.NET MVC", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dot-net.svg" },
-        { title: "ASP.NET Core", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dot-net.svg" },
-        { title: "Entity Framework", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dot-net.svg" },
+        { title: "ASP.NET MVC", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" },
+        { title: "ASP.NET Core", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" },
+        { title: "Entity Framework", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" },
         { title: "Angular", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/angular.svg" },
         { title: "Node.js", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" },
         { title: "jQuery", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jquery.svg" },

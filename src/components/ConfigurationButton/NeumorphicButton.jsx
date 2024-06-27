@@ -7,8 +7,8 @@ const NeumorphicButtons = ({ skills = [], title }) => {
       <div className="content mx-auto">
       {skills && skills.map((skill, index) => (
         <button className='btn text-center neumorphic' key={`neumorphic_button_${index}`}>
-          {/* <i className='fa-light fa-fire'></i> */}
-          {skill?.title}
+          <img width={50} src={skill?.image} alt="" />
+          <p>{skill?.title}</p>
         </button>
       ))}
       </div>      
@@ -24,9 +24,9 @@ NeumorphicButtons.propTypes = {
   title: PropTypes.string
   };
   
-  NeumorphicButtons.defaultProps = {
+NeumorphicButtons.defaultProps = {
     skills : () => [],
     title: ''
-  };
+};
 
 export default NeumorphicButtons
