@@ -17,15 +17,15 @@ function HomeView(){
                     setCurrentLenguageParent={setCurrentLenguage}
                     setCurrentThemeParent={setCurrentTheme} 
                     />
-                <Presentation 
+                {/* <Presentation 
                     About={PresentationInfo.About} 
                     ImageUrl={PresentationInfo.ImageUrl} 
                     CurrentLanguage={currentLenguage} 
-                    key="Presentation" />                   
+                    key="Presentation" />                    */}
                 <ShapeHeader />
             </div>  
 
-            <div className="row position-relative pt-5 mt-5 pb-5 mb-5">
+            {/* <div className="row position-relative pt-5 mt-5 pb-5 mb-5">
                 <div className="embla-containers">
                     <EmblaCarousel 
                     currentLenguaje={currentLenguage} 
@@ -38,7 +38,7 @@ function HomeView(){
             
             <div className="row certificate-container">
                 <CertificateSection />
-            </div>
+            </div> */}
             <br /><br /><br /><br /><br /><br /><br /><br /><br />
             
             {/* <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} /> */}
