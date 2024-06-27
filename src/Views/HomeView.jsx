@@ -1,13 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
 
 
 function HomeView(){
-    const [ currentLenguage, setCurrentLenguage ] = useState('Title');
+    const [ currentLenguage, setCurrentLenguage ] = useState('ES');
+    const [presentation, setPresentation] = useState({});
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
-    const [ currentTheme, setCurrentTheme ] = useState('Title')
+    const [ currentTheme, setCurrentTheme ] = useState('SuperMan')
+
+    useEffect(() => {
+        if(currentLenguage){
+            let newPresentation = presentation;
+            newPresentation = PresentationInfo[currentLenguage];
+            setPresentation(newPresentation)
+        }
+    },[currentLenguage])
 
     return(
         <div className='container-fluid position-relative p-0 m-0'>
@@ -17,11 +26,11 @@ function HomeView(){
                     setCurrentLenguageParent={setCurrentLenguage}
                     setCurrentThemeParent={setCurrentTheme} 
                     />
-                {/* <Presentation 
-                    About={PresentationInfo.About} 
-                    ImageUrl={PresentationInfo.ImageUrl} 
+                <Presentation 
+                    About={presentation?.About} 
+                    ImageUrl={presentation?.ImageUrl} 
                     CurrentLanguage={currentLenguage} 
-                    key="Presentation" />                    */}
+                    key="Presentation" />                   
                 <ShapeHeader />
             </div>  
 
