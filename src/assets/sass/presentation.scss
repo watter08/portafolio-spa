@@ -6,10 +6,12 @@
 }
 
 .presentation-info {
+    display: flex;
     flex: 80%;
     font-size: 24px;
     font-family: 'Poppins', 'Outfit', sans-serif;
     text-align: left;
+    align-items: center;
 }
 
 .presentation-img {

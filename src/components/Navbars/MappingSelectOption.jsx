@@ -29,10 +29,4 @@ MappingSelectOption.propTypes = {
   value:PropTypes.string
 };
 
-MappingSelectOption.defaultProps = {
-  Options: [],
-  Index: -5,
-  value:''
-};
-
 export default MappingSelectOption;

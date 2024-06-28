@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection, NeumorphicButtons } from '../components/index'
+import { AboutMe,Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection, NeumorphicButtons } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
 import { headers, data } from '../logic/const/certificates.const'
 import { skills } from '../logic/const/skills.const'
+import { AboutMeInfo } from '../logic/const/aboutme.const';
 
 
 function HomeView(){
@@ -13,6 +14,7 @@ function HomeView(){
     const [skillsData, setSkillsData] = useState({});
     const [certificateheaders, setCertificateheaders] = useState([]);
     const [certificateData, setCertificateData] = useState([]);
+    const [aboutMeInfo, setAboutMeInfo] = useState([]);
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
     const [ currentTheme, setCurrentTheme ] = useState('SuperMan')
 
@@ -38,6 +40,10 @@ function HomeView(){
             let newSkills = skillsData;
             newSkills = skills[currentLenguage];
             setSkillsData(newSkills)
+
+            let newaboutMeInfo = aboutMeInfo;
+            newaboutMeInfo = AboutMeInfo[currentLenguage];
+            setAboutMeInfo(newaboutMeInfo)
         }
     },[currentLenguage])
 
@@ -76,6 +82,12 @@ function HomeView(){
 
             <NeumorphicButtons skills={skillsData?.skills || []} title={skillsData?.title} />
             
+                <AboutMe 
+                experience={aboutMeInfo?.experience || []}
+                title={aboutMeInfo?.title} 
+                laboralTitle={aboutMeInfo?.laboralTitle}
+                works={aboutMeInfo?.works}
+                />
         </div>
     )
 }

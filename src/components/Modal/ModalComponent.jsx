@@ -36,10 +36,6 @@ ModalComponent.propTypes = {
     closeModal: PropTypes.func 
   };
   
-ModalComponent.defaultProps = {
-    isOpen:     false, 
-    openModal:  () => {}, 
-    closeModal: () => {}
-  };
+
 
 export default ModalComponent;

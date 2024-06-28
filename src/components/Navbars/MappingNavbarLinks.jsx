@@ -16,9 +16,7 @@ MappingDropLi.propTypes = {
   })),
 };
 
-MappingDropLi.defaultProps = {
-  Drops: [],
-};
+
 
 const MappingNavbarLinks = ({ Links = []}) => (
    Links && Links?.length > 0 ? Links.map(link => (
@@ -52,8 +50,5 @@ MappingNavbarLinks.propTypes = {
   }))
 };
 
-MappingNavbarLinks.defaultProps = {
-  Links: []
-};
 
 export default MappingNavbarLinks;
