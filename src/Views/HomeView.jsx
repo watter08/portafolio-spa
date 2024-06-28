@@ -42,22 +42,24 @@ function HomeView(){
     },[currentLenguage])
 
     return(
-        <div className='container-fluid position-relative p-0 m-0'>
-            <div className="container-shape">
+        <div className='container-fluid row position-relative p-0 m-0'>
+            <div className="container-shape position-relative w-100">
                 <Navbar 
                     className="position-absolute" 
                     setCurrentLenguageParent={setCurrentLenguage}
                     setCurrentThemeParent={setCurrentTheme} 
                     />
+                    
                 <Presentation 
                     About={presentation?.About} 
                     ImageUrl={presentation?.ImageUrl} 
                     CurrentLanguage={currentLenguage} 
-                    key="Presentation" />                   
+                    key="Presentation" />    
+
                 <ShapeHeader />
             </div>  
 
-            <div className="row position-relative pt-5 mt-5 pb-5 mb-5">
+             <div className="position-relative pt-5 mt-5 pb-5 mb-5">
                 <div className="embla-containers">
                     <EmblaCarousel 
                     currentLenguaje={currentLenguage} 
@@ -68,15 +70,12 @@ function HomeView(){
                 </div>
             </div>
             
-            <div className="row certificate-container">
+            <div className="certificate-container table-responsive">
                 <CertificateSection header={certificateheaders} data={certificateData} />
             </div>
 
-            <div className="row">
-                    <NeumorphicButtons skills={skillsData?.skills || []} title={skillsData?.title} />
-            </div>
+            <NeumorphicButtons skills={skillsData?.skills || []} title={skillsData?.title} />
             
-            {/* <GeneralInfo className="position-absolute" whoIAmData={WhoIAm} currentLanguage={currentLenguage} /> */}
         </div>
     )
 }

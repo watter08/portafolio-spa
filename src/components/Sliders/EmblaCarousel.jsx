@@ -36,7 +36,6 @@ const EmblaCarousel = ({ slides, options }) => {
         <div className="embla__container">
           {slides.map((slide ,index) => (
             <div className="embla__slide" key={index}>
-              {/* <div className="embla__slide__number">{index + 1}</div> */}
               <h3 className="embla__slide__title">{slide?.Title}</h3>
               <h4 className="embla__slide__subtitle">{slide?.SubTitle}</h4>
               <h6 className="embla__slide__details">{slide?.Details}</h6>

@@ -78,7 +78,8 @@ const DataTableComponent = ({ headers, data, rowsPerPage, rowsPerPageOptions, st
                     }}
                 />                
             </div>
-            <table className="table table-striped data-table__table table-responsive">
+            <div className="table-responsive">
+            <table className="data-table__table table table-dark table-striped">
                 <thead>
                     <tr>
                         {headers.map(header => (
@@ -86,7 +87,7 @@ const DataTableComponent = ({ headers, data, rowsPerPage, rowsPerPageOptions, st
                         ))}
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='table-group-divider'>
                     {currentItems.map((row, index) => (
                         <tr key={index}>
                             {headers.map(header => (
@@ -98,6 +99,8 @@ const DataTableComponent = ({ headers, data, rowsPerPage, rowsPerPageOptions, st
                     ))}
                 </tbody>
             </table>
+            </div>
+            
             <div className="data-table__footer">
                 <div className="data-table__page-info">
                     Page {currentPage} of {totalPages}
@@ -108,7 +111,7 @@ const DataTableComponent = ({ headers, data, rowsPerPage, rowsPerPageOptions, st
                         disabled={currentPage === 1}
                     >
                         Previous
-                    </button>
+                    </button> {"  "}{"  "}
                     <button
                         onClick={() => paginate(currentPage + 1)}
                         disabled={currentPage === totalPages}

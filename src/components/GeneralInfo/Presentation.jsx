@@ -39,7 +39,7 @@ function Presentation({ About, ImageUrl }){
                     <span>{About}</span>
                 </div>
                 <div className="presentation-img">
-                    <img  width="300" src={userImage} alt="" />
+                    <img src={userImage} alt="" />
                 </div>
             </div>
     )
