@@ -3,8 +3,8 @@ import { DataTable } from '../'
 
 const CertificateSection = ({ data = [], header = []}) => {
     return(
-        <div className="position-relative">
-            <div className="certificate-info">
+        <div className="position-relative mx-auto">
+            <div className="content mx-auto certificate-info">
                 <p className="title">Certificados y Hoja de Vida</p>
             </div>
                 <div className="content mx-auto position-relative">                    
