@@ -45,7 +45,7 @@ function AboutMe({experience = [], title = '', laboralTitle, works}){
     return(
         <>
             <div className="aboutme-container blue pb-5">
-                <div className="content mx-auto">
+                <div className="content mx-auto pt-5">
                     <h4>{title}</h4>
                     <ExperienceInfo experiences={experience} />                    
                 </div>
