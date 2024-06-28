@@ -30,9 +30,5 @@ CertificateSection.propTypes = {
     data:PropTypes.array
 };
   
-CertificateSection.defaultProps = {
-    data : () => [],
-    header:() => []
-};
 
 export default CertificateSection

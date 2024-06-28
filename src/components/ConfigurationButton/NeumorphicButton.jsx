@@ -24,9 +24,5 @@ NeumorphicButtons.propTypes = {
   title: PropTypes.string
   };
   
-NeumorphicButtons.defaultProps = {
-    skills : () => [],
-    title: ''
-};
 
 export default NeumorphicButtons

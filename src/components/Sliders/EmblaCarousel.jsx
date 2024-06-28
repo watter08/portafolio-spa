@@ -70,9 +70,5 @@ EmblaCarousel.propTypes = {
     }),
   };
   
-  EmblaCarousel.defaultProps = {
-    slides: [],
-    options: {},
-  };
 
 export default EmblaCarousel

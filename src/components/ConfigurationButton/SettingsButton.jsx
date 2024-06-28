@@ -45,9 +45,4 @@ SettingsButton.propTypes = {
     ConfigurationLabel: PropTypes.string,
 };
 
-MappingSelectOption.defaultProps = {
-    SelectConfiguration: [],
-    ConfigurationLabel: '',
-  };
-  
 export default SettingsButton

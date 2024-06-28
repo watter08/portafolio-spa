@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
+import PropTypes from 'prop-types';
 import MappingNavbarLinks from "./MappingNavbarLinks"
 import SettingsButton from '../ConfigurationButton/SettingsButton'
 import { NavbarInit } from "../../logic/const/navbar.const"
 import { ConfigurationButtonInfo } from "../../logic/const/configuration.const"
-import PropTypes from 'prop-types';
+
 
 function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent = () => {}}) {
     const [ navData, setNavData ] = useState({})
@@ -104,9 +105,5 @@ Navbar.propTypes = {
     setCurrentThemeParent:PropTypes.func
   };
   
-  Navbar.defaultProps = {
-    setCurrentLenguageParent : () => {},
-    setCurrentThemeParent:() => {}
-  };
 
 export default Navbar
