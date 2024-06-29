@@ -1,8 +1,13 @@
+html[data-theme="SuperMan"]{
+    --background: #{$lightAboutMeBackground};   
+  }
+  
+  html[data-theme="Batman"]{
+    --background: #{$darkAboutMeBackground};
+  }
+
 .aboutme-container.blue{    
-    background: hsla(280, 95%, 57%, 1);
-    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: var(--background);
 }
 
 .aboutme-container.gray {
@@ -11,11 +16,7 @@
   }
 
   .aboutme-container.contact{    
-    background: hsla(280, 95%, 57%, 1);
-    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-    
+    background: var(--background);
 }
   .aboutme-container {
     min-height: 600px;

@@ -3,12 +3,14 @@ html[data-theme="SuperMan"]{
 
   --color-white: #{$lightColorWhite};
   --color-black: #{$lightColorBlack};
-
-  --up-button-background: #{$lightBackgroundUpButton};
+  
+  --up-button-background-container: #{$lightBackgroundUpButtonContainer};
+  --up-button-color: #{$lightUpButtonColor};
+  --up-button-background: #{$lightUpButtonBackground};
 
   --certificate-info-title-color: #{$lightCertificateTitleColor};
   --certificate-info-subtitle-color: #{$lightCertificateSubtitleColor};
-  --certificate-info-link-color: #{$lightCertificateLinkColor};
+  --certificate-info-link-color: #{$lightUpButtonBackground};
 }
 
 html[data-theme="Batman"]{
@@ -17,7 +19,9 @@ html[data-theme="Batman"]{
   --color-white: #{$darkColorWhite};
   --color-black: #{$darkColorBlack};
 
-  --up-button-background: #{$darkBackgroundUpButton};
+  --up-button-background-container: #{$darkBackgroundUpButtonContainer};
+  --up-button-color: #{$darkUpButtonColor};
+  --up-button-background: #{$darkUpButtonBackground};
 
   --certificate-info-title-color: #{$darkCertificateTitleColor};
   --certificate-info-subtitle-color: #{$darkCertificateSubtitleColor};
@@ -61,7 +65,7 @@ html[data-theme="Batman"]{
   min-width: 300px;
 }
 .up-button {
-  background-image: var(--up-button-background);
+  background-image: var(--up-button-background-container);
   min-height: 80px;
   padding: 30px;
   text-align: end;
@@ -70,12 +74,16 @@ html[data-theme="Batman"]{
 .up-button a {
   min-width: 200px;
   padding: 20px;
+  background: var(--up-button-background) !important;
+  color: var(--up-button-color) !important;
+  font-weight: 600;
 }
 
 .up-button a:hover{
-  background: #ffffff;
-  border: none;
-  color: var(--color-white);
+  min-width: 200px;
+  padding: 20px;
+  background: var(--up-button-background) !important;
+  color: var(--up-button-color) !important;
   font-weight: 600;
 }
 

@@ -1,5 +1,9 @@
 // LIGHT
- $lightBackgroundUpButton: linear-gradient( 135deg, #FF9D6C 10%, #BB4E75 100%);
+ $lightUpButtonBackground: #fff;
+ $lightUpButtonColor: #444;
+ $lightBackgroundUpButtonContainer:linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
  
  // DARK
- $darkBackgroundUpButton: linear-gradient( 135deg, #FAB2FF 10%, #1904E5 100%);
+ $darkUpButtonBackground: #444;
+ $darkUpButtonColor: #fff;
+ $darkBackgroundUpButtonContainer:linear-gradient(135deg, #7E6BF2 0%, #5B61F6 100%);
