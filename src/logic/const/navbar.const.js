@@ -8,8 +8,8 @@ export const NavbarInit = {
         Links:[
             {
                 IsDropDown: false,
-                Title: 'Resumen',
-                Link:'#Resume',
+                Title: 'Hoja de Vida',
+                Link:`http://localhost:5173/src/assets/certificates/Watter Resume.pdf`,
                 Drops:[] 
              },
              {
@@ -17,25 +17,6 @@ export const NavbarInit = {
                 Title: 'Certificados',
                 Link:'#Certificates',
                 Drops:[] 
-             },
-             {
-                IsDropDown: true,
-                Title: 'Enlaces',
-                Link:'#',
-                Drops:[
-                    {
-                        IsDropDown: false,
-                        Title: 'Portafolio',
-                        Link:'#',
-                        Drops:[] 
-                     },
-                     {
-                         IsDropDown: false,
-                         Title: 'Hoja de Vida',
-                         Link:'#',
-                         Drops:[] 
-                      },
-                ] 
              }
         ]
     },
@@ -49,7 +30,7 @@ export const NavbarInit = {
             {
                 IsDropDown: false,
                 Title: 'Resume',
-                Link:'#Resume',
+                Link:`http://localhost:5173/src/assets/certificates/Watter Resume.pdf`,
                 Drops:[] 
              },
              {
@@ -57,25 +38,6 @@ export const NavbarInit = {
                 Title: 'Certificates',
                 Link:'#Certificates',
                 Drops:[] 
-             },
-             {
-                IsDropDown: true,
-                Title: 'Links',
-                Link:'#',
-                Drops:[
-                    {
-                        IsDropDown: false,
-                        Title: 'Briefcase',
-                        Link:'#',
-                        Drops:[] 
-                     },
-                     {
-                         IsDropDown: false,
-                         Title: 'Curriculum Vitae',
-                         Link:'#',
-                         Drops:[] 
-                      },
-                ] 
              }
         ]
     }

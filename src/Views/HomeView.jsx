@@ -102,7 +102,7 @@ function HomeView(){
                 </div>
             </div>
             
-            <div className="certificate-container table-responsive">
+            <div className="certificate-container table-responsive" id='Certificates'>
                 <CertificateSection 
                 certificateLabel={certificateLabel}
                 header={certificateheaders} 

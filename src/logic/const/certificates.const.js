@@ -12,7 +12,7 @@ export const CertificateList = [
     "Sql_Basic.pdf",
     "Sql_Intermediate.pdf",
     "IT_Technician.jpeg",
-    "Watter's Resume.pdf",
+    "Watter Resume.pdf",
     "Profile.pdf"
 ];
 
@@ -133,7 +133,7 @@ export const data = {
             Title:'Hoja de Vida',
             Details: 'Currículum vitae de Watter. Resumen profesional y experiencia laboral en el campo de la tecnología y desarrollo de software.',
             Platform: 'Experiencias',
-            Link:'/src/assets/certificates/Watter\'s_Resume.pdf',
+            Link:'/src/assets/certificates/Watter Resume.pdf',
             Image:'/src/assets/certificates/icons/resume.png'
         },
         {
@@ -240,7 +240,7 @@ export const data = {
             Title: 'Watter\'s Resume',
             Details: 'Watter\'s professional resume. Overview of professional background and experience in technology and software development.',
             Platform: 'Experiences',
-            Link: '/src/assets/certificates/Watter\'s_Resume.pdf',
+            Link: '/src/assets/certificates/Watter Resume.pdf',
             Image: '/src/assets/certificates/icons/resume.png'
         },
         {
