@@ -16,7 +16,7 @@ const SettingsButton = ({ SelectConfiguration, ConfigurationLabel }) => {
       <ul className="dropdown-menu" aria-labelledby="settingsDropdown">      
         {SelectConfiguration && SelectConfiguration.map((option, index) => (
             <li key={`SelectOptionConfigurationButton_${index}`} className="settingsDropdown dropdown-item mb-3">                
-            <h4>{option?.Label}</h4>
+            <h4 className="outfit-medium">{option?.Label}</h4>
             <MappingSelectOption 
             Options={option?.Options} 
             onChange={option?.onChange} 
