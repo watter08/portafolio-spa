@@ -9,13 +9,20 @@ export const AboutMeInfo = {
             'A lo largo de mi carrera, he demostrado una capacidad sólida para resolver problemas complejos, trabajar en equipos multidisciplinarios y entregar proyectos de alta calidad dentro de plazos ajustados. Estoy comprometido con el aprendizaje continuo y me mantengo al tanto de las últimas tendencias y tecnologías en el campo del desarrollo de software.'
         ],
         laboralTitle: 'Experiencia Laboral',
+        laborallabels:{
+            aboutCompany:'Sobre la Empresa',
+            dateInCompany:'Estadia en la Empresa',
+            placeCompany:'Lugar',
+            positionsInCompany:'Pocisiones Logradas',
+            functionsInCompany:'Responsabilidades'
+        },
         works:[
             {
                 companyName: 'Hunter del Caribe Dominicana',
                 companyDescription:'Servicios de Monitoreo GPS, Seguridad Privada, Monitoreo Vehicular y Sistemas de Alarmas para Hogares y Empresas.',
                 positions:['Analista Programador', 'Lider de Equipo', 'Coordinador del Departamento de Desarrollo'],
                 fromTo:'10/2019 - 01/2022',
-                place:'Distrito Nacional',
+                place:'Distrito Nacional, Republica Dominicana',
                 goals:[
                     "En mi paso y colaboración en esta empresa, desempeñé diversas funciones.",
                     "Inicialmente, desarrollé aplicaciones para la gestión interna de la empresa y brindé soporte técnico en una estación de trabajo.",
@@ -31,7 +38,7 @@ export const AboutMeInfo = {
                 companyDescription:'EvoPoint es una empresa de servicios de tecnología de la información y desarrollo de software especializada en integración de la nube, análisis de datos y tecnología móvil.',
                 positions:['Ingeniero de Software Intermedio'],
                 fromTo:'09/2022 - 02/2024',
-                place:'Distrito Nacional',
+                place:'Distrito Nacional, Republica Dominicana',
                 goals:[
                     'Durante mi tiempo en Evopoint, colaboré con diversos equipos en varios proyectos para desarrollar aplicaciones y funcionalidades.',
                     'Las tecnologías utilizadas incluyeron SharePoint Online, Angular 9+, Oracle, .NET con Entity Framework para APIs REST, implementando patrones de diseño como Singleton, CQRS, Azure Functions, entre otros.',
@@ -44,14 +51,31 @@ export const AboutMeInfo = {
                 companyDescription:'Empresa de consultora empresarial con 15 años de experiencias en el mercado, aseguramos la correcta continuidad operacional de sus instalaciones y sistemas.',
                 positions:['Ingeniero de Software'],
                 fromTo:'06/2022 - 06/2024',
-                place:'Distrito Nacional',
+                place:'Distrito Nacional, Republica Dominicana',
                 goals:[
                     "En mi experiencia laboral en esta empresa de Outsourcing, me dediqué exclusivamente al cliente Claro Dominicana. Trabajé en el departamento de Activaciones, desarrollando características para facilitar la gestión, configuración y provisión de información o sistemas necesarios en el campo de las telecomunicaciones y la complejidad de los sistemas.",
                     "Durante este tiempo, utilicé tecnologías como SQL Server, Angular 8+, Vue.js y .NET para REST APIs y SOAP."
                 ]                
             }
         ],
-        contactInfoLabel:'Información de Contacto'
+        contactInfoLabel:'Información de Contacto',
+        contactInfo:{
+            labels:{
+                phone:'Telefono',
+                email:'Correo',
+                linkdn:'Linkedin',
+                github:'Github',
+                page:'Pagina Web'
+
+            },
+            info:{
+                phone:'829 959 5484',
+                email:'watterdeaza@gmail.com',
+                linkdn:'https://www.linkedin.com/in/watter-de-aza-de-leon/',
+                github:'https://github.com/watter08',
+                page:'En Desarrollo'
+            }
+        }
     },
     EN:{
         title:'About Me',
@@ -63,13 +87,20 @@ export const AboutMeInfo = {
             'Throughout my career, I have demonstrated a solid ability to solve complex problems, work in multidisciplinary teams, and deliver high-quality projects within tight deadlines. I am committed to continuous learning and keep up with the latest trends and technologies in the field of software development.'
         ],
         laboralTitle: 'Work Experience',
+        laborallabels: {
+            aboutCompany: 'About the Company',
+            dateInCompany: 'Time in the Company',
+            placeCompany: 'Location',
+            positionsInCompany: 'Positions Held',
+            functionsInCompany: 'Responsibilities'
+        },        
         works:[
             {
                 companyName: 'Hunter del Caribe Dominicana',
                 companyDescription : 'GPS Monitoring Services, Private Security, Vehicle Monitoring, and Alarm Systems for Homes and Businesses.',
                 positions: ['Programmer Analyst', 'Team Leader', 'Development Department Coordinator'],
                 fromTo: '10/2019 - 01/2022',
-                place: 'National District',
+                place: 'National District, Dominican Republic',
                 goals:[
                     "During my tenure and collaboration with this company, I performed various functions.",
                     "Initially, I developed applications for the company's internal management and provided technical support at a workstation.",
@@ -85,7 +116,7 @@ export const AboutMeInfo = {
                 companyDescription: 'EvoPoint is an information technology services and software development company specializing in cloud integration, data analytics, and mobile technology.',
                 positions: ['Intermediate Software Engineer'],
                 fromTo: '09/2022 - 02/2024',
-                place: 'Distrito Nacional',
+                place: 'Distrito Nacional, Dominican Republic',
                 goals: [
                     'During my time at Evopoint, I collaborated with various teams on multiple projects to develop applications and features.',
                     'Technologies used included SharePoint Online, Angular 9+, Oracle, .NET with Entity Framework for REST APIs, implementing design patterns like Singleton, CQRS, Azure Functions, among others.',
@@ -98,15 +129,30 @@ export const AboutMeInfo = {
                 companyDescription: 'Innovix is a business consulting company with 15 years of experience in the market, ensuring the smooth operational continuity of your facilities and systems.',
                 positions: ['Software Engineer'],
                 fromTo: '06/2022 - 06/2024',
-                place: 'Distrito Nacional',
+                place: 'Distrito Nacional, Dominican Republic',
                 goals: [
                     "During my tenure at this Outsourcing company, I worked exclusively with Claro Dominicana. I was involved in the Activations department, developing features to facilitate management, configuration, and provision of necessary information or systems in telecommunications and system complexity.",
                     "Technologies used during this period included SQL Server, Angular 8+, Vue.js, and .NET for REST APIs and SOAP."
                 ]
-            }
-            
-            
+            }          
         ],
-        contactInfoLabel:'Contact Information'
+        contactInfoLabel:'Contact Information',
+        contactInfo:{
+            labels:{
+                phone:'Phone Number',
+                email:'Email',
+                linkdn:'Linkedin',
+                github:'Github',
+                page:'Web Page'
+
+            },
+            info:{
+                phone:'829 959 5484',
+                email:'watterdeaza@gmail.com',
+                linkdn:'https://www.linkedin.com/in/watter-de-aza-de-leon/',
+                github:'https://github.com/watter08',
+                page:'In Development'
+            }
+        }
     }
 }

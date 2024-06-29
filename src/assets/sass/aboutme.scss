@@ -1,28 +1,64 @@
 .aboutme-container.blue{    
-    background-color: rgba(126,184,253,1);
-    background-image: linear-gradient( 178.7deg,  rgba(126,184,253,1) 5.6%, rgba(2,71,157,1) 95.3% );
-   
+    background: hsla(280, 95%, 57%, 1);
+    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
 }
 
 .aboutme-container.gray {
-    background: #efefef;
-    min-height: 400px;
+    background: #FFFFFF;
+    min-height: 600px;
   }
 
+  .aboutme-container.contact{    
+    background: hsla(280, 95%, 57%, 1);
+    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    
+}
   .aboutme-container {
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     color: #ffffff;
     font-weight: 600;
 }
+.contact-card-body{
+    backdrop-filter: blur(0px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(0px) saturate(200%)  !important;
+    background-color: rgba(255, 255, 255, 0.37) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(209, 213, 219, 0.3) !important;
+    color: #FFFFFF  !important;
+}
+
 .aboutme-container.gray .content{
     color: #1a1919;
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     font-weight: 600;
     flex-flow: column;
     justify-content: center;
 }
 
+.laboral-place-fromto{
+    display: flex ;
+    padding: 20px 0;
+}
+.laboral-from-to{
+    flex: 50%;
+}
+.laboral-place{
+    flex: 50%;
+}
+
+.contact-info-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-info-container .info{
+    flex: 50%;
+    padding: 20px;
+}
