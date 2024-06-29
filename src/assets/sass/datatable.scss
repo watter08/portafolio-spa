@@ -1,3 +1,45 @@
+html[data-theme="SuperMan"]{
+
+    --glass-backdrop-filter: #{$lightDatatableBackdropFilter};
+    --glass-background-color: #{$lightDatatableBackgroundColor};
+    --glass-border: #{$lightDatatableBorder};
+
+
+    --per-row-color: #{$lightDatatablePerRowColor};   
+
+    --button-active-background: #{$lightDatatableButtonActiveBackground};
+    --button-active-color:#{$lightDatatableButtonActiveColor};
+    --button-disabled-background:#{$lightDatatableDisabledBackground}; 
+    --button-disabled-color:#{$lightDatatableDisabledColor};
+
+    --thead-background:#{$lightDatatableTheadBackground}; 
+    --thead-color:#{$lightDatatabeTheadColor};
+  }
+  
+  html[data-theme="Batman"]{
+    --glass-backdrop-filter: #{$darkDatatableBackdropFilter};
+    --glass-background-color: #{$darkDatatableBackgroundColor};
+    --glass-border: #{$darkDatatableBorder};
+
+    --per-row-color: #{$darkDatatablePerRowColor};   
+    
+    --button-active-background: #{$darkDatatableButtonActiveBackground};
+    --button-active-color:#{$darkDatatableButtonActiveColor};
+    --button-disabled-background:#{$darkDatatableDisabledBackground}; 
+    --button-disabled-color:#{$darkDatatableDisabledColor};
+
+    --thead-background:#{$darkDatatableTheadBackground}; 
+    --thead-color:#{$darkDatatabeTheadColor};
+  }
+
+.table-dark th{
+    background-color: var(--thead-background) !important;
+    color: var(--thead-color) !important;
+}
+
+
+
+
 .data-table {
     margin: auto;
     box-sizing: border-box;
@@ -7,12 +49,12 @@
 }
 
 .data-table.glass{
-    backdrop-filter: blur(5px) saturate(200%);
-    -webkit-backdrop-filter: blur(5px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.66);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    color: #181616;
+    backdrop-filter: var(--glass-backdrop-filter);
+    -webkit-backdrop-filter: var(--glass-backdrop-filter);
+    background-color: var(--glass-background-color);
+    border: var(--glass-border);
+    border-radius: 12px;    
+    color: var(--per-row-color);
     font-weight: 600;
 }
 
@@ -54,22 +96,22 @@
 
 .data-table__page-info {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--per-row-color);
 }
 
 .data-table__pagination-buttons button {
     padding: 0.5rem 3rem;
-    // margin-left: 8px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--button-active-background);
+    color: var(--button-active-color);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .data-table__pagination-buttons button:disabled {
-    background-color: #ccc;
+    background-color: var(--button-disabled-background);
+    color: var(--button-disabled-color);
     cursor: not-allowed;
 }
 
