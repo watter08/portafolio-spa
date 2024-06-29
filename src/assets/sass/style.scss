@@ -1,25 +1,31 @@
 html[data-theme="SuperMan"]{
-  --shape-wave-background1: #{$lightShapeWaveBackground1};
-  --shape-wave-background2: #{$lightShapeWaveBackground2};
-  --shape-wave-background3: #{$lightShapeWaveBackground3};
-  --shape-wave-background4: #{$lightShapeWaveBackground4};
+  --shape-wave-background: #{$lightShapeWaveBackground};
 
   --color-white: #{$lightColorWhite};
   --color-black: #{$lightColorBlack};
+  
+  --up-button-background-container: #{$lightBackgroundUpButtonContainer};
+  --up-button-color: #{$lightUpButtonColor};
+  --up-button-background: #{$lightUpButtonBackground};
 
-  --up-button-background: #{$lightBackgroundUpButton};
+  --certificate-info-title-color: #{$lightCertificateTitleColor};
+  --certificate-info-subtitle-color: #{$lightCertificateSubtitleColor};
+  --certificate-info-link-color: #{$lightUpButtonBackground};
 }
 
 html[data-theme="Batman"]{
-  --shape-wave-background1: #{$darkShapeWaveBackground1};
-  --shape-wave-background2: #{$darkShapeWaveBackground2};
-  --shape-wave-background3: #{$darkShapeWaveBackground3};
-  --shape-wave-background4: #{$darkShapeWaveBackground4};
+  --shape-wave-background: #{$darkShapeWaveBackground};
 
   --color-white: #{$darkColorWhite};
   --color-black: #{$darkColorBlack};
 
-  --up-button-background: #{$darkBackgroundUpButton};
+  --up-button-background-container: #{$darkBackgroundUpButtonContainer};
+  --up-button-color: #{$darkUpButtonColor};
+  --up-button-background: #{$darkUpButtonBackground};
+
+  --certificate-info-title-color: #{$darkCertificateTitleColor};
+  --certificate-info-subtitle-color: #{$darkCertificateSubtitleColor};
+  --certificate-info-link-color: #{$darkCertificateLinkColor};
 }
 
 .content {
@@ -29,19 +35,13 @@ html[data-theme="Batman"]{
 
 .container-shape {
   position: relative;
-  background: var(--shape-wave-background1);
-  background: var(--shape-wave-background2);
-  background: var(--shape-wave-background3);
-  background: var(--shape-wave-background4);
+  background: var(--shape-wave-background);
   min-height: 700px;
   height: auto;
 }
 
 .certificate-container {
-  background: var(--shape-wave-background1);
-  background: var(--shape-wave-background2);
-  background: var(--shape-wave-background3);
-  background: var(--shape-wave-background4);
+  background: var(--shape-wave-background);
   min-height: 800px;
   padding: 30px;
 }
@@ -65,7 +65,7 @@ html[data-theme="Batman"]{
   min-width: 300px;
 }
 .up-button {
-  background-image: var(--up-button-background);
+  background-image: var(--up-button-background-container);
   min-height: 80px;
   padding: 30px;
   text-align: end;
@@ -74,13 +74,31 @@ html[data-theme="Batman"]{
 .up-button a {
   min-width: 200px;
   padding: 20px;
+  background: var(--up-button-background) !important;
+  color: var(--up-button-color) !important;
+  font-weight: 600;
 }
 
 .up-button a:hover{
-  background: #ffffff;
-  border: none;
-  color: var(--color-white);
+  min-width: 200px;
+  padding: 20px;
+  background: var(--up-button-background) !important;
+  color: var(--up-button-color) !important;
   font-weight: 600;
+}
+
+.certificate-info .title {
+  color: var(--certificate-info-title-color);
+}
+
+.certificate-info .subtitle{
+  color: var(--certificate-info-subtitle-color);
+}
+
+.certificate-info .subtitle a{
+  color: var(--certificate-info-link-color);
+  font-weight: 600;
+  font-size: 19px;
 }
 
 @media (max-width: 1026px) {

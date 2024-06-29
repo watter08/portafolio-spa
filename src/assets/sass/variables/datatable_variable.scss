@@ -1,0 +1,39 @@
+
+/////////////////////
+/// LIGHT
+/////////////////////
+
+$lightDatatableBackdropFilter: blur(5px) saturate(200%);
+$lightDatatableBackgroundColor: rgba(255, 255, 255, 0.66);
+$lightDatatableBorder: 1px solid rgba(209, 213, 219, 0.3);
+
+$lightDatatablePerRowColor: #333;
+
+$lightDatatableButtonActiveBackground:  #2065db ;
+$lightDatatableDisabledBackground:  #ccc;
+$lightDatatableButtonActiveColor: #fff;
+$lightDatatableDisabledColor: #333;
+
+$lightDatatableTheadBackground:   #5B61F6 ;
+$lightDatatabeTheadColor:  #fff;
+
+
+ 
+/////////////////////
+/// DARK
+/////////////////////
+
+$darkDatatableBackdropFilter: blur(9px) saturate(196%);;
+$darkDatatableBackgroundColor: rgba(201, 25, 234, 0.24);
+$darkDatatableBorder:1px solid rgba(209, 213, 219, 0.3);
+
+$darkDatatablePerRowColor: #fff;
+
+$darkDatatableButtonActiveBackground:  #5151E5;
+$darkDatatableDisabledBackground:  #fffefe ;
+$darkDatatableButtonActiveColor: #fff;
+$darkDatatableDisabledColor: #333;
+
+$darkDatatableTheadBackground:  #fff;
+$darkDatatabeTheadColor:  #333;
+

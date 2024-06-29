@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AboutMe,Navbar,  ShapeHeader, Presentation,  EmblaCarousel, CertificateSection, NeumorphicButtons } from '../components/index'
 import { PresentationInfo } from '../logic/const/presentation.const';
 import { ProjectsWorked } from '../logic/const/projects.const'
-import { headers, data } from '../logic/const/certificates.const'
+import { headers, data, certificateSectionLabels } from '../logic/const/certificates.const'
 import { skills } from '../logic/const/skills.const'
 import { AboutMeInfo } from '../logic/const/aboutme.const';
 import { UpButton } from '../logic/const/configuration.const';
@@ -21,6 +21,7 @@ function HomeView(){
     const [certificateData, setCertificateData] = useState([]);
     const [aboutMeInfo, setAboutMeInfo] = useState([]);
     const [ upBotton, setUpButton] = useState({});
+    const [ certificateLabel, setCertificateLabel] = useState({});
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
     const [ currentTheme, setCurrentTheme ] = useState(THEMES.light)
 
@@ -62,9 +63,13 @@ function HomeView(){
             newaboutMeInfo = AboutMeInfo[currentLenguage];
             setAboutMeInfo(newaboutMeInfo)
 
-            let newUpButton = UpButton;
+            let newUpButton = upBotton;
             newUpButton = UpButton[currentLenguage];
             setUpButton(newUpButton)
+
+            let newCertificateLabel = certificateLabel;
+            newCertificateLabel = certificateSectionLabels[currentLenguage];
+            setCertificateLabel(newCertificateLabel)
         }
     },[currentLenguage])
 
@@ -98,7 +103,10 @@ function HomeView(){
             </div>
             
             <div className="certificate-container table-responsive">
-                <CertificateSection header={certificateheaders} data={certificateData} />
+                <CertificateSection 
+                certificateLabel={certificateLabel}
+                header={certificateheaders} 
+                data={certificateData} />
             </div>
 
             <NeumorphicButtons skills={skillsData?.skills || []} title={skillsData?.title} />
@@ -114,7 +122,7 @@ function HomeView(){
                 />
 
             <div className="up-button">                
-                <a className="btn btn-dark" href='#home'>
+                <a className="btn" href='#home'>
                     {upBotton?.homeUpLabel}
                     <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-arrow-up ms-2">
                         <line x1="12" y1="19" x2="12" y2="5"></line>
