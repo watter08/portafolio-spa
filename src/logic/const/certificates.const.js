@@ -14,7 +14,27 @@ export const CertificateList = [
     "IT_Technician.jpeg",
     "Watter's Resume.pdf",
     "Profile.pdf"
-]
+];
+
+export const certificateSectionLabels = {
+    ES:{
+        title:'Certificados y Hoja de Vida',
+        subtitle:'Iconos Obtenidos desde',
+        link:{
+            title:'Iconos 8',
+            link:'https://iconos8.es/'
+        }
+    },
+    EN:{
+        "title": "Certificates and Resume",
+        "subtitle": "Icons Obtained from",
+        "link": {
+            "title": "Icons 8",
+            "link": "https://iconos8.es/"
+        }
+    }
+}
+
 
 export const data = {
     ES:[

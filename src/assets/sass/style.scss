@@ -5,6 +5,10 @@ html[data-theme="SuperMan"]{
   --color-black: #{$lightColorBlack};
 
   --up-button-background: #{$lightBackgroundUpButton};
+
+  --certificate-info-title-color: #{$lightCertificateTitleColor};
+  --certificate-info-subtitle-color: #{$lightCertificateSubtitleColor};
+  --certificate-info-link-color: #{$lightCertificateLinkColor};
 }
 
 html[data-theme="Batman"]{
@@ -14,6 +18,10 @@ html[data-theme="Batman"]{
   --color-black: #{$darkColorBlack};
 
   --up-button-background: #{$darkBackgroundUpButton};
+
+  --certificate-info-title-color: #{$darkCertificateTitleColor};
+  --certificate-info-subtitle-color: #{$darkCertificateSubtitleColor};
+  --certificate-info-link-color: #{$darkCertificateLinkColor};
 }
 
 .content {
@@ -69,6 +77,20 @@ html[data-theme="Batman"]{
   border: none;
   color: var(--color-white);
   font-weight: 600;
+}
+
+.certificate-info .title {
+  color: var(--certificate-info-title-color);
+}
+
+.certificate-info .subtitle{
+  color: var(--certificate-info-subtitle-color);
+}
+
+.certificate-info .subtitle a{
+  color: var(--certificate-info-link-color);
+  font-weight: 600;
+  font-size: 19px;
 }
 
 @media (max-width: 1026px) {
