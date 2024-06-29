@@ -13,7 +13,7 @@ ExperienceInfo.propTypes = {
     experiences : PropTypes.arrayOf(PropTypes.string)
 };
 
-const Works = ({ works = []}) => {
+const Works = ({ works = [], laborallabels}) => {
     return(
             <>
             {works && works.length > 0 && works.map((work, index) => (
@@ -22,7 +22,36 @@ const Works = ({ works = []}) => {
                 title={work?.companyName}
                 date={work?.fromTo}
                 >
-                    <h1>Accordion he</h1>
+                    <div className="card">
+                        <div className="card-body p-5">
+                            <div className="laboral-description">
+                                <h5>{laborallabels?.aboutCompany}</h5>
+                                <span>{work?.companyDescription}</span>
+                            </div>
+                            <div className="laboral-place-fromto">
+                                <div className="laboral-from-to pt-4">
+                                    <h5>{laborallabels?.dateInCompany}</h5>
+                                    <span>{work?.fromTo}</span>
+                                </div>
+                                <div className="laboral-place pt-4">
+                                    <h5>{laborallabels?.placeCompany}</h5>
+                                    <span>{work?.place}</span>
+                                </div>
+                            </div> 
+                            <div className="laboral-positions pt-2 pb-4">
+                                <h5>{laborallabels?.positionsInCompany}</h5>
+                                {work?.positions && work?.positions?.length > 0 && work.positions.map((position, index) => (
+                                    <span key={`position_key_${index}`}>{`${position}${work.positions.length != index+1 ? ',' : ''} `}</span>
+                                ))}
+                            </div>   
+                            <div className="laboral-goals pt-2 pb-4">
+                                <h5>{laborallabels?.functionsInCompany}</h5>
+                                {work?.goals && work?.goals?.length > 0 && work.goals.map((goal, index) => (
+                                    <p key={`goals${index}`}>{`${goal}${work.goals.length != index+1 ? ',' : ''} `}</p>
+                                ))}
+                            </div>                          
+                        </div>
+                    </div>
                 </AccordionCard>
             ))}
             </>            
@@ -37,11 +66,75 @@ Works.propTypes = {
         place:PropTypes.string,
         positions: PropTypes.arrayOf(PropTypes.string),
         goals: PropTypes.arrayOf(PropTypes.string)
-    }))
+    })),
+    laborallabels: PropTypes.shape({
+        aboutCompany: PropTypes.string,
+        dateInCompany: PropTypes.string,
+        placeCompany: PropTypes.string,
+        positionsInCompany: PropTypes.string,
+        functionsInCompany: PropTypes.string
+    })
 };
 
+const Contact = ({ contactInfo = {}}) => {
+    return(
+            <>
+                <div className="contact-card-body card">
+                    <div className="card-body p-5">
+                        <div className="contact-info-container">
 
-function AboutMe({experience = [], title = '', laboralTitle, works}){
+                            <div className="info">
+                            <h5>{contactInfo?.labels?.email}</h5>
+                            <span>{contactInfo?.info?.email}</span>
+                            </div>
+
+                            <div className="info">
+                            <h5>{contactInfo?.labels?.phone}</h5>
+                            <span>{contactInfo?.info?.phone}</span>
+                            </div>
+
+                            <div className="info">
+                            <h5>{contactInfo?.labels?.github}</h5>
+                            <span>{contactInfo?.info?.github}</span>
+                            </div>
+
+                            <div className="info">
+                            <h5>{contactInfo?.labels?.linkdn}</h5>
+                            <span>{contactInfo?.info?.linkdn}</span>
+                            </div>
+
+                            <div className="info">
+                            <h5>{contactInfo?.labels?.page}</h5>
+                            <span>{contactInfo?.info?.page}</span>
+                            </div>
+
+                        </div> 
+                    </div>
+                </div>
+            </>            
+    )
+}
+
+Contact.propTypes = {
+    contactInfo: PropTypes.shape({
+        labels: PropTypes.shape({
+            phone:PropTypes.string,
+            email:PropTypes.string,
+            linkdn:PropTypes.string,
+            github:PropTypes.string,
+            page:PropTypes.string
+        }),
+        info: PropTypes.shape({
+            phone:PropTypes.string,
+            email:PropTypes.string,
+            linkdn:PropTypes.string,
+            github:PropTypes.string,
+            page:PropTypes.string
+        })
+    })
+};
+
+function AboutMe({experience = [], title = '', laboralTitle, works, laborallabels,contactInfo,ContactLabel = ''}){
     return(
         <>
             <div className="aboutme-container blue pb-5">
@@ -50,10 +143,19 @@ function AboutMe({experience = [], title = '', laboralTitle, works}){
                     <ExperienceInfo experiences={experience} />                    
                 </div>
             </div>
-            <div className='aboutme-container gray pb-3'>
-                <div className="content mx-auto">
+            <div className='aboutme-container gray pb-5'>
+                <div className="content mx-auto pt-5">
                     <h4>{laboralTitle}</h4>
-                    <Works works={works} />
+                    <Works 
+                    works={works} 
+                    laborallabels={laborallabels}
+                    />
+                </div>
+            </div>
+            <div className='aboutme-container contact gray pb-5'>
+                <div className="content mx-auto pt-5">
+                    <h4 className='text-white'>{ContactLabel}</h4>
+                    <Contact contactInfo={contactInfo} />
                 </div>
             </div>
         </>                    
@@ -72,7 +174,31 @@ AboutMe.propTypes = {
         place:PropTypes.string,
         positions: PropTypes.arrayOf(PropTypes.string),
         goals: PropTypes.arrayOf(PropTypes.string)
-    }))
+    })),
+    laborallabels: PropTypes.shape({
+        aboutCompany: PropTypes.string,
+        dateInCompany: PropTypes.string,
+        placeCompany: PropTypes.string,
+        positionsInCompany: PropTypes.string,
+        functionsInCompany: PropTypes.string
+    }),
+    contactInfo: PropTypes.shape({
+        labels: PropTypes.shape({
+            phone:PropTypes.string,
+            email:PropTypes.string,
+            linkdn:PropTypes.string,
+            github:PropTypes.string,
+            page:PropTypes.string
+        }),
+        info: PropTypes.shape({
+            phone:PropTypes.string,
+            email:PropTypes.string,
+            linkdn:PropTypes.string,
+            github:PropTypes.string,
+            page:PropTypes.string
+        })
+    }),
+    ContactLabel: PropTypes.string
 };
   
 

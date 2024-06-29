@@ -5,7 +5,12 @@ import { ProjectsWorked } from '../logic/const/projects.const'
 import { headers, data } from '../logic/const/certificates.const'
 import { skills } from '../logic/const/skills.const'
 import { AboutMeInfo } from '../logic/const/aboutme.const';
+import { UpButton } from '../logic/const/configuration.const';
 
+const THEMES = Object.freeze({
+    light: 'SuperMan',
+    dark:'Batman'
+});
 
 function HomeView(){
     const [ currentLenguage, setCurrentLenguage ] = useState('ES');
@@ -15,8 +20,20 @@ function HomeView(){
     const [certificateheaders, setCertificateheaders] = useState([]);
     const [certificateData, setCertificateData] = useState([]);
     const [aboutMeInfo, setAboutMeInfo] = useState([]);
+    const [ upBotton, setUpButton] = useState({});
     const [Options] = useState({ axis: 'y', dragFree: true, direction: 'rtl', loop: true })
-    const [ currentTheme, setCurrentTheme ] = useState('SuperMan')
+    const [ currentTheme, setCurrentTheme ] = useState(THEMES.light)
+
+    useEffect(()=> {
+        const root = document.documentElement;
+        root.setAttribute('data-theme', THEMES.light);
+    },[])
+
+    const handleChangeTheme = (theme) => {
+        const root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        setCurrentTheme(theme)
+    }
 
 
     useEffect(() => {
@@ -44,16 +61,20 @@ function HomeView(){
             let newaboutMeInfo = aboutMeInfo;
             newaboutMeInfo = AboutMeInfo[currentLenguage];
             setAboutMeInfo(newaboutMeInfo)
+
+            let newUpButton = UpButton;
+            newUpButton = UpButton[currentLenguage];
+            setUpButton(newUpButton)
         }
     },[currentLenguage])
 
     return(
         <div className='container-fluid row position-relative p-0 m-0'>
-            <div className="container-shape position-relative w-100">
-                <Navbar 
+            <div className="container-shape position-relative w-100" id="home">
+                <Navbar                     
                     className="position-absolute" 
                     setCurrentLenguageParent={setCurrentLenguage}
-                    setCurrentThemeParent={setCurrentTheme} 
+                    setCurrentThemeParent={handleChangeTheme} 
                     />
                     
                 <Presentation 
@@ -87,7 +108,20 @@ function HomeView(){
                 title={aboutMeInfo?.title} 
                 laboralTitle={aboutMeInfo?.laboralTitle}
                 works={aboutMeInfo?.works}
+                laborallabels={aboutMeInfo?.laborallabels}
+                contactInfo={aboutMeInfo?.contactInfo}
+                ContactLabel={aboutMeInfo?.contactInfoLabel}
                 />
+
+            <div className="up-button">                
+                <a className="btn btn-dark" href='#home'>
+                    {upBotton?.homeUpLabel}
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-arrow-up ms-2">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                </a>
+            </div>
         </div>
     )
 }

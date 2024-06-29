@@ -1,3 +1,27 @@
+html[data-theme="SuperMan"]{
+  --shape-wave-background1: #{$lightShapeWaveBackground1};
+  --shape-wave-background2: #{$lightShapeWaveBackground2};
+  --shape-wave-background3: #{$lightShapeWaveBackground3};
+  --shape-wave-background4: #{$lightShapeWaveBackground4};
+
+  --color-white: #{$lightColorWhite};
+  --color-black: #{$lightColorBlack};
+
+  --up-button-background: #{$lightBackgroundUpButton};
+}
+
+html[data-theme="Batman"]{
+  --shape-wave-background1: #{$darkShapeWaveBackground1};
+  --shape-wave-background2: #{$darkShapeWaveBackground2};
+  --shape-wave-background3: #{$darkShapeWaveBackground3};
+  --shape-wave-background4: #{$darkShapeWaveBackground4};
+
+  --color-white: #{$darkColorWhite};
+  --color-black: #{$darkColorBlack};
+
+  --up-button-background: #{$darkBackgroundUpButton};
+}
+
 .content {
   max-width: 1600px; 
   width: 100%;
@@ -5,21 +29,25 @@
 
 .container-shape {
   position: relative;
-  background-color: rgba(126,184,253,1);
-  background-image: linear-gradient( 178.7deg,  rgba(126,184,253,1) 5.6%, rgba(2,71,157,1) 95.3% );
+  background: var(--shape-wave-background1);
+  background: var(--shape-wave-background2);
+  background: var(--shape-wave-background3);
+  background: var(--shape-wave-background4);
   min-height: 700px;
   height: auto;
 }
 
 .certificate-container {
-  background-color: rgba(126,184,253,1);
-  background-image: linear-gradient( 178.7deg,  rgba(126,184,253,1) 5.6%, rgba(2,71,157,1) 95.3% );
+  background: var(--shape-wave-background1);
+  background: var(--shape-wave-background2);
+  background: var(--shape-wave-background3);
+  background: var(--shape-wave-background4);
   min-height: 800px;
   padding: 30px;
 }
 
 .certificate-container .title{
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 23px;
   font-weight: 600;
   text-align: end;
@@ -27,7 +55,7 @@
 
 .certificate-container .subtitle{
   padding-top: 15px;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 18px;
   font-weight: 600;
   text-align: start;
@@ -36,6 +64,25 @@
 .settingsDropdown{
   min-width: 300px;
 }
+.up-button {
+  background-image: var(--up-button-background);
+  min-height: 80px;
+  padding: 30px;
+  text-align: end;
+}
+
+.up-button a {
+  min-width: 200px;
+  padding: 20px;
+}
+
+.up-button a:hover{
+  background: #ffffff;
+  border: none;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
 @media (max-width: 1026px) {
   .certificate-container {
     padding: 10px;

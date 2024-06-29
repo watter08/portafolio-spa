@@ -1,6 +1,15 @@
+export const UpButton = {
+    ES: {
+        homeUpLabel:'Inicio'
+    },
+    EN:{
+        homeUpLabel:'Home',
+    }
+}
+
 export const ConfigurationButtonInfo = {
     ES: {
-        ConfigurationLabel: 'Configuración',
+        ConfigurationLabel: 'Configuración',        
         ThemeLabel: 'Tema',
         LanguageLabel: 'Idioma',
         Languages: [
@@ -25,7 +34,7 @@ export const ConfigurationButtonInfo = {
         ]
     },
     EN:{
-        ConfigurationLabel: 'Configuration',
+        ConfigurationLabel: 'Configuration',        
         ThemeLabel: 'Theme',
         LanguageLabel: 'Language',
         Languages: [

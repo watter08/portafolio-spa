@@ -1,0 +1,33 @@
+// backdrop-filter: blur(12px) saturate(200%);
+//     -webkit-backdrop-filter: blur(12px) saturate(200%);
+//     background-color: rgba(255, 255, 255, 0.28);
+//     border: 1px solid rgba(209, 213, 219, 0.3);
+
+/////////////////////
+/// LIGHT
+/////////////////////
+
+$lightNavbarBackdropFilter: blur(12px) saturate(200%);
+$lightNavbarBackgroundColor: rgba(255, 255, 255, 0.28);
+$lightNavbarBorder:1px solid rgba(209, 213, 219, 0.3);
+
+
+$lightNavbarBrandColor: #333;
+
+$lightNavbarLinkBangroundHover: #333;
+$lightNavbarLinkColorHover:#fff;
+ 
+/////////////////////
+/// DARK
+/////////////////////
+
+$darkNavbarBackdropFilter: blur(9px) saturate(196%);;
+$darkNavbarBackgroundColor: rgba(201, 25, 234, 0.24);
+$darkNavbarBorder:1px solid rgba(209, 213, 219, 0.3);
+
+
+$darkNavbarBrandColor: #fff;
+
+
+$darkNavbarLinkBangroundHover: #fff;
+$darkNavbarLinkColorHover: #513162;
