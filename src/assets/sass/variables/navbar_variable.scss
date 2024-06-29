@@ -2,6 +2,7 @@
 //     -webkit-backdrop-filter: blur(12px) saturate(200%);
 //     background-color: rgba(255, 255, 255, 0.28);
 //     border: 1px solid rgba(209, 213, 219, 0.3);
+$purple: #cc0fc9;
 
 /////////////////////
 /// LIGHT
@@ -16,6 +17,10 @@ $lightNavbarBrandColor: #333;
 
 $lightNavbarLinkBangroundHover: #333;
 $lightNavbarLinkColorHover:#fff;
+
+$lightNavbarConfigurationButtonBangroundHover: #333;
+$lightNavbarConfigurationButtonColorHover:#fff;
+
  
 /////////////////////
 /// DARK
@@ -30,4 +35,7 @@ $darkNavbarBrandColor: #fff;
 
 
 $darkNavbarLinkBangroundHover: #fff;
-$darkNavbarLinkColorHover: #513162;
+$darkNavbarLinkColorHover: $purple;
+
+$darkNavbarConfigurationButtonBangroundHover: #fff;
+$darkNavbarConfigurationButtonColorHover:$purple;

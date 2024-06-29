@@ -8,6 +8,9 @@ html[data-theme="SuperMan"]{
 
   --link-background-hover: #{$lightNavbarLinkBangroundHover};
   --link-color-hover: #{$lightNavbarLinkColorHover};
+
+  --configuration-button-background: #{$lightNavbarConfigurationButtonBangroundHover};
+  --configuration-button-color: #{$lightNavbarConfigurationButtonColorHover};
  
 }
 
@@ -20,6 +23,9 @@ html[data-theme="Batman"]{
 
   --link-background-hover: #{$darkNavbarLinkBangroundHover};
   --link-color-hover: #{$darkNavbarLinkColorHover};
+
+  --configuration-button-background: #{$darkNavbarConfigurationButtonBangroundHover};
+  --configuration-button-color: #{$darkNavbarConfigurationButtonColorHover};
 }
 
 .navbar{
@@ -53,6 +59,14 @@ html[data-theme="Batman"]{
     transition: color 0.25s;
   }
 
+  #settingsDropdown{
+    width: 200px;
+    background-color:  var(--configuration-button-background);
+    color: var(--configuration-button-color);
+    border: none;
+    font-weight: 600;
+  }
+  
   .lenguaje-select{
     width: 300px;
     padding: 5px;
@@ -65,7 +79,14 @@ html[data-theme="Batman"]{
     gap: 20px;
   }
 
-  .search-input-navbar,
-  .search-button-navbar {
+  .search-input-navbar{
     border-radius: 0;
+  }
+
+  .search-button-navbar{
+    border-radius: 0;
+    background-color: var(--configuration-button-background) !important;
+    color: var(--configuration-button-color) !important;
+    border: none !important;
+    font-weight: 600 !important;
   }
