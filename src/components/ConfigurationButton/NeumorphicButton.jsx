@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const NeumorphicButtons = ({ skills = [], title }) => {
   return(
     <div className='neumorphicbuttons pt-5 pb-5 position-relative'>
-      <h2>{title}</h2>
+      <h2 className="outfit-bold">{title}</h2>
       <div className="content mx-auto">
       {skills && skills.map((skill, index) => (
         <button className='btn text-center neumorphic' key={`neumorphic_button_${index}`}>

@@ -1,10 +1,17 @@
+html[data-theme="SuperMan"]{
+  --border-top: #{$lightBorderTop};   
+}
+
+html[data-theme="Batman"]{
+  --border-top: #{$darkBorderTop};
+}
+
 .accordion-card {
-    border: 1px solid #ddd;
+    border-top: var(--border-top);
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 20px 0;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  }
+    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);      }
   
   .accordion-header {
     display: flex;

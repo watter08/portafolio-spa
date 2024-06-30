@@ -12,7 +12,7 @@ const AccordionCard = ({ title, date, children }) => {
     <div className="accordion-card">
       <div className="accordion-header">
         <div className="header-content">
-          <h2 className="title">{title}</h2>
+          <h2 className="title outfit-medium">{title}</h2>
           <span className="date">{date}</span>
         </div>
         <button className="toggle-button" onClick={toggleAccordion}>

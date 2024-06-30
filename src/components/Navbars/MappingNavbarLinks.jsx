@@ -22,7 +22,7 @@ const MappingNavbarLinks = ({ Links = []}) => (
    Links && Links?.length > 0 ? Links.map(link => (
       link && link.IsDropDown ? (
         <li className="nav-item dropdown" key={`${link}_1`}>
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle"  href={link?.Link} role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {link?.Title}
           </a>
           <ul className="dropdown-menu">
@@ -31,7 +31,7 @@ const MappingNavbarLinks = ({ Links = []}) => (
         </li>
       ) : (
         <li className="nav-item" key={`${link?.Title}_2`}>
-          <a className="nav-link active" aria-current="page" href="#">{link?.Title}</a>
+          <a className="nav-link active" aria-current="page" target={String(link?.Link).startsWith("#") ? "" : "_blank"} rel='noreferrer' href={link?.Link}>{link?.Title}</a>
         </li>
       )
     )) : ''

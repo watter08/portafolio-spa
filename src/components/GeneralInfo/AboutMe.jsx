@@ -4,7 +4,7 @@ import AccordionCard from '../Accordion/AccordionCard'
 const ExperienceInfo = ({experiences = []}) => {
     return(
         <div className="ExperienceInfo">
-            {experiences && experiences?.length > 0 ? experiences.map((experience, index) =>  <h6 key={`info_of_work_${index}`}>{experience}</h6>): ''}
+            {experiences && experiences?.length > 0 ? experiences.map((experience, index) =>  <h6 className='outfit-medium pt-3' key={`info_of_work_${index}`}>{experience}</h6>): ''}
         </div>
     )
 }
@@ -25,27 +25,27 @@ const Works = ({ works = [], laborallabels}) => {
                     <div className="card">
                         <div className="card-body p-5">
                             <div className="laboral-description">
-                                <h5>{laborallabels?.aboutCompany}</h5>
+                                <h5 className='outfit-bold'>{laborallabels?.aboutCompany}</h5>
                                 <span>{work?.companyDescription}</span>
                             </div>
                             <div className="laboral-place-fromto">
                                 <div className="laboral-from-to pt-4">
-                                    <h5>{laborallabels?.dateInCompany}</h5>
+                                    <h5 className='outfit-bold'>{laborallabels?.dateInCompany}</h5>
                                     <span>{work?.fromTo}</span>
                                 </div>
                                 <div className="laboral-place pt-4">
-                                    <h5>{laborallabels?.placeCompany}</h5>
+                                    <h5 className='outfit-bold'>{laborallabels?.placeCompany}</h5>
                                     <span>{work?.place}</span>
                                 </div>
                             </div> 
                             <div className="laboral-positions pt-2 pb-4">
-                                <h5>{laborallabels?.positionsInCompany}</h5>
+                                <h5 className='outfit-bold'>{laborallabels?.positionsInCompany}</h5>
                                 {work?.positions && work?.positions?.length > 0 && work.positions.map((position, index) => (
                                     <span key={`position_key_${index}`}>{`${position}${work.positions.length != index+1 ? ',' : ''} `}</span>
                                 ))}
                             </div>   
                             <div className="laboral-goals pt-2 pb-4">
-                                <h5>{laborallabels?.functionsInCompany}</h5>
+                                <h5 className='outfit-bold'>{laborallabels?.functionsInCompany}</h5>
                                 {work?.goals && work?.goals?.length > 0 && work.goals.map((goal, index) => (
                                     <p key={`goals${index}`}>{`${goal}${work.goals.length != index+1 ? ',' : ''} `}</p>
                                 ))}
@@ -84,27 +84,27 @@ const Contact = ({ contactInfo = {}}) => {
                         <div className="contact-info-container">
 
                             <div className="info">
-                            <h5>{contactInfo?.labels?.email}</h5>
+                            <h5 className='outfit-medium'>{contactInfo?.labels?.email}</h5>
                             <span>{contactInfo?.info?.email}</span>
                             </div>
 
                             <div className="info">
-                            <h5>{contactInfo?.labels?.phone}</h5>
+                            <h5 className='outfit-medium'>{contactInfo?.labels?.phone}</h5>
                             <span>{contactInfo?.info?.phone}</span>
                             </div>
 
                             <div className="info">
-                            <h5>{contactInfo?.labels?.github}</h5>
+                            <h5 className='outfit-medium'>{contactInfo?.labels?.github}</h5>
                             <span>{contactInfo?.info?.github}</span>
                             </div>
 
                             <div className="info">
-                            <h5>{contactInfo?.labels?.linkdn}</h5>
+                            <h5 className='outfit-medium'>{contactInfo?.labels?.linkdn}</h5>
                             <span>{contactInfo?.info?.linkdn}</span>
                             </div>
 
                             <div className="info">
-                            <h5>{contactInfo?.labels?.page}</h5>
+                            <h5 className='outfit-medium'>{contactInfo?.labels?.page}</h5>
                             <span>{contactInfo?.info?.page}</span>
                             </div>
 
@@ -139,13 +139,13 @@ function AboutMe({experience = [], title = '', laboralTitle, works, laborallabel
         <>
             <div className="aboutme-container blue pb-5">
                 <div className="content mx-auto pt-5">
-                    <h4>{title}</h4>
+                    <h2 className='outfit-medium pb-3'>{title}</h2>
                     <ExperienceInfo experiences={experience} />                    
                 </div>
             </div>
             <div className='aboutme-container gray pb-5'>
                 <div className="content mx-auto pt-5">
-                    <h4>{laboralTitle}</h4>
+                    <h2 className='outfit-medium pb-3 experience'>{laboralTitle}</h2>
                     <Works 
                     works={works} 
                     laborallabels={laborallabels}
@@ -154,7 +154,7 @@ function AboutMe({experience = [], title = '', laboralTitle, works, laborallabel
             </div>
             <div className='aboutme-container contact gray pb-5'>
                 <div className="content mx-auto pt-5">
-                    <h4 className='text-white'>{ContactLabel}</h4>
+                    <h2 className='text-white outfit-medium pb-3'>{ContactLabel}</h2>
                     <Contact contactInfo={contactInfo} />
                 </div>
             </div>

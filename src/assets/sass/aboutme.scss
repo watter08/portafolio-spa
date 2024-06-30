@@ -1,9 +1,13 @@
 html[data-theme="SuperMan"]{
     --background: #{$lightAboutMeBackground};   
+    --background-laboral-expirience: #{$lightAccordionBackground};
+    --expirience-title-color: #{$lightExpirienceTitle};
   }
   
   html[data-theme="Batman"]{
     --background: #{$darkAboutMeBackground};
+    --background-laboral-expirience: #{$darkAccordionBackground};
+    --expirience-title-color: #{$darkExpirienceTitle};
   }
 
 .aboutme-container.blue{    
@@ -11,8 +15,8 @@ html[data-theme="SuperMan"]{
 }
 
 .aboutme-container.gray {
-    background: #FFFFFF;
-    min-height: 600px;
+    background: var(--background-laboral-expirience);
+    min-height: 600px;    
   }
 
   .aboutme-container.contact{    
@@ -33,6 +37,10 @@ html[data-theme="SuperMan"]{
     border-radius: 12px !important;
     border: 1px solid rgba(209, 213, 219, 0.3) !important;
     color: #FFFFFF  !important;
+}
+
+.aboutme-container.gray .content .experience{
+    color: var(--expirience-title-color) !important;
 }
 
 .aboutme-container.gray .content{
