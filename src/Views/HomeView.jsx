@@ -75,7 +75,7 @@ function HomeView(){
 
     return(
         <div className='container-fluid row position-relative p-0 m-0'>
-            <div className="container-shape position-relative w-100" id="home">
+            <div className="container-shape position-relative w-100 " id="home">
                 <Navbar                     
                     className="position-absolute" 
                     setCurrentLenguageParent={setCurrentLenguage}

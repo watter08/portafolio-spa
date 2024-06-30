@@ -139,13 +139,13 @@ function AboutMe({experience = [], title = '', laboralTitle, works, laborallabel
         <>
             <div className="aboutme-container blue pb-5">
                 <div className="content mx-auto pt-5">
-                    <h4 className='outfit-medium pb-3'>{title}</h4>
+                    <h2 className='outfit-medium pb-3'>{title}</h2>
                     <ExperienceInfo experiences={experience} />                    
                 </div>
             </div>
             <div className='aboutme-container gray pb-5'>
                 <div className="content mx-auto pt-5">
-                    <h4 className='outfit-medium pb-3'>{laboralTitle}</h4>
+                    <h2 className='outfit-medium pb-3 experience'>{laboralTitle}</h2>
                     <Works 
                     works={works} 
                     laborallabels={laborallabels}
@@ -154,7 +154,7 @@ function AboutMe({experience = [], title = '', laboralTitle, works, laborallabel
             </div>
             <div className='aboutme-container contact gray pb-5'>
                 <div className="content mx-auto pt-5">
-                    <h4 className='text-white outfit-medium pb-3'>{ContactLabel}</h4>
+                    <h2 className='text-white outfit-medium pb-3'>{ContactLabel}</h2>
                     <Contact contactInfo={contactInfo} />
                 </div>
             </div>
