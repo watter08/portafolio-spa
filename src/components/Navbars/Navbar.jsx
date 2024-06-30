@@ -90,8 +90,8 @@ function Navbar( { setCurrentLenguageParent = () => {} , setCurrentThemeParent =
                                     SelectConfiguration={configurationInputs}
                                     ConfigurationLabel={ConfigurationButtonInfo[currentLanguage]?.ConfigurationLabel}
                                  />                                            
-                            <input className="form-control search-input-navbar me-2" type="search" placeholder="" aria-label="Search" />
-                            <button className="btn btn-dark search-button-navbar" type="submit">{navData?.ButtonSearch}</button>                        
+                            <input  disabled={true} className="form-control search-input-navbar me-2" type="search" placeholder="" aria-label="Search" />
+                            <button disabled={true} className="btn btn-dark search-button-navbar" type="submit">{navData?.ButtonSearch}</button>                        
                         </form>
                     </div>
                 </div>
