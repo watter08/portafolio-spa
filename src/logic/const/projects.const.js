@@ -2,7 +2,7 @@ export const ProjectsWorked = {
 ES:
     [
         {
-            Title:'Cripto Monedas En Tiempo Real',
+            Title:'Cripto Monedas En Tiempo Real a',
             SubTitle:'https://vue-coin.vercel.app',
             Details:'Esta aplicación web, desarrollada con Vue.js 3.2.13, permite consultar y visualizar en tiempo real los precios de criptomonedas mediante APIs de CoinGecko y CoinMarketCap. Ofrece gráficos interactivos y personalización de preferencias, gestionadas con Vuex y Firebase. La interfaz es moderna y responsiva, utilizando Vuetify para un diseño adaptable en todos los dispositivos.',
             Image:'/src/assets/image/projects/cripto-monedas.png'
