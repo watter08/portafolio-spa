@@ -20,13 +20,13 @@ EN:
             Title: 'Cryptocurrencies in Real-Time',
             SubTitle: 'https://vue-coin.vercel.app',
             Details: 'This web application, developed with Vue.js 3.2.13, allows users to check and view real-time cryptocurrency prices through APIs from CoinGecko and CoinMarketCap. It offers interactive charts and preference customization managed with Vuex and Firebase. The interface is modern and responsive, using Vuetify for an adaptable design across all devices.',
-            Image: '/src/assets/image/projects/cripto-monedas.png'
+            Image: '/image/projects/cripto-monedas.png'
         },
         {
             Title: 'Portfolio',
             SubTitle: 'https://portafolio-spa.vercel.app/',
             Details: 'This web application, developed with ReactJS 18.2.0 and utilizing Vite, is designed to provide visitors with comprehensive information relevant to the recruitment process. The platform includes a personal introduction, a portfolio of projects, certifications from platforms such as HackerRank and SoloLearn, as well as a detailed list of skills and competencies. Additionally, it offers a complete profile of the individual, including work experience and contact information, all available in two languages: Spanish and English.',
-            Image: '/src/assets/image/projects/portafolio.png'
+            Image: '/image/projects/portafolio.png'
         }        
     ]
 }
