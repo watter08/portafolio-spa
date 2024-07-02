@@ -2,55 +2,21 @@ export const ProjectsWorked = {
 ES:
     [
         {
-            Title:'Explode Land Rover',
-            SubTitle:'Defender 90',
-            Details:'Hola, es muy difícil deshacerse de la grasa. Asperores, como cuerpo que produce dolor y voluntad presente, temporal, pero en consecuencia, y asumirá el amor de voluntad legítimamente designado.',
-            Image:'/src/assets/image/slide/project_1.webp'
+            Title:'Cripto Monedas En Tiempo Real',
+            SubTitle:'https://vue-coin.vercel.app',
+            Details:'Esta aplicación web, desarrollada con Vue.js 3.2.13, permite consultar y visualizar en tiempo real los precios de criptomonedas mediante APIs de CoinGecko y CoinMarketCap. Ofrece gráficos interactivos y personalización de preferencias, gestionadas con Vuex y Firebase. La interfaz es moderna y responsiva, utilizando Vuetify para un diseño adaptable en todos los dispositivos.',
+            Image:'/src/assets/image/projects/cripto-monedas.png'
         },
-        {
-            Title:'Ranger Rover',
-            SubTitle:'Defender 90',
-            Details:'Hola, es muy difícil deshacerse de la grasa. Asperores, como cuerpo que produce dolor y voluntad presente, temporal, pero en consecuencia, y asumirá el amor de voluntad legítimamente designado.',
-            Image:'/src/assets/image/slide/project_2.webp'
-        },
-        {
-            Title:'Honda Accord 2025',
-            SubTitle:'Defender 90',
-            Details:'Hola, es muy difícil deshacerse de la grasa. Asperores, como cuerpo que produce dolor y voluntad presente, temporal, pero en consecuencia, y asumirá el amor de voluntad legítimamente designado.',
-            Image:'/src/assets/image/slide/project_1.webp'
-        },
-        {
-            Title:'Audi',
-            SubTitle:'Defender 90',
-            Details:'Hola, es muy difícil deshacerse de la grasa. Asperores, como cuerpo que produce dolor y voluntad presente, temporal, pero en consecuencia, y asumirá el amor de voluntad legítimamente designado.',
-            Image:'/src/assets/image/slide/project_2.webp'
-        }      
+          
     ],
 EN:
     [
         {
-            Title:'Explode Land Rover',
-            SubTitle:'Defender 90',
-            Details:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas quae corporis qui ducimus praesentium, dolor temporibus vel autem voluptatibus, modi, consequuntur id velit assumenda quibusdam iure alias amet voluptas.',
-            Image:'/src/assets/image/slide/project_1.webp'
-        },
-        {
-            Title:'Explode Land Rover',
-            SubTitle:'Defender 90',
-            Details:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas quae corporis qui ducimus praesentium, dolor temporibus vel autem voluptatibus, modi, consequuntur id velit assumenda quibusdam iure alias amet voluptas.',
-            Image:'/src/assets/image/slide/project_1.webp'
-        },
-        {
-            Title:'Explode Land Rover',
-            SubTitle:'Defender 90',
-            Details:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas quae corporis qui ducimus praesentium, dolor temporibus vel autem voluptatibus, modi, consequuntur id velit assumenda quibusdam iure alias amet voluptas.',
-            Image:'/src/assets/image/slide/project_1.webp'
-        },
-        {
-            Title:'Explode Land Rover',
-            SubTitle:'Defender 90',
-            Details:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas quae corporis qui ducimus praesentium, dolor temporibus vel autem voluptatibus, modi, consequuntur id velit assumenda quibusdam iure alias amet voluptas.',
-            Image:'/src/assets/image/slide/project_1.webp'
-        },
+            "Title": "Real-Time Cryptocurrency Prices",
+            "SubTitle": "https://vue-coin.vercel.app",
+            "Details": "This web application, developed with Vue.js 3.2.13, allows users to view real-time cryptocurrency prices using APIs from CoinGecko and CoinMarketCap. It offers interactive charts and customizable preferences, managed with Vuex and Firebase. The interface is modern and responsive, utilizing Vuetify for an adaptive design across all devices.",
+            "Image": "/src/assets/image/projects/cripto-monedas.png"
+        }
+          
     ]
 }

@@ -83,7 +83,7 @@ export const data = {
         {
             Title:'JavaScript Intermedio',
             Details: 'Curso intermedio de JavaScript. Profundiza en temas avanzados como objetos, funciones de orden superior y manejo de errores.',
-            Platform: 'HackerRank',
+            Platform: 'SoloLearn',
             Link:'/src/assets/certificates/Javascript_Intermediate.pdf',
             Image:'/src/assets/certificates/icons/javascript.png'
         },
@@ -190,7 +190,7 @@ export const data = {
         {
             Title: 'JavaScript Intermediate',
             Details: 'Intermediate course on JavaScript. Delves into advanced topics such as objects, higher-order functions, and error handling.',
-            Platform: 'HackerRank',
+            Platform: 'SoloLearn',
             Link: '/src/assets/certificates/Javascript_Intermediate.pdf',
             Image: '/src/assets/certificates/icons/javascript.png'
         },

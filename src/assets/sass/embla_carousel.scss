@@ -37,6 +37,7 @@ html[data-theme="Batman"]{
     flex: 0 0 var(--slide-size);
     min-height: 0;
     padding-top: var(--slide-spacing);
+    text-align: end;
   }
   .embla__slide__title{
     font-size: 24px;
@@ -51,7 +52,7 @@ html[data-theme="Batman"]{
   }
   .embla__slide__details{
     font-size: 16px;
-    text-align: left;
+    text-align: end;
     padding-bottom: 20px;
     color: var(--embla-details-color);
     font-weight: 600;
