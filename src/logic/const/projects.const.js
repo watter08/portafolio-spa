@@ -5,13 +5,13 @@ ES:
             Title:'Cripto Monedas En Tiempo Real a',
             SubTitle:'https://vue-coin.vercel.app',
             Details:'Esta aplicación web, desarrollada con Vue.js 3.2.13, permite consultar y visualizar en tiempo real los precios de criptomonedas mediante APIs de CoinGecko y CoinMarketCap. Ofrece gráficos interactivos y personalización de preferencias, gestionadas con Vuex y Firebase. La interfaz es moderna y responsiva, utilizando Vuetify para un diseño adaptable en todos los dispositivos.',
-            Image:'/src/assets/image/projects/cripto-monedas.png'
+            Image:'/image/projects/cripto-monedas.png'
         },
         {
             Title:'Portafolio',
             SubTitle:'https://portafolio-spa.vercel.app/',
             Details:'Esta aplicación web, desarrollada con ReactJS 18.2.0 y utilizando Vite, está diseñada para proporcionar a los visitantes toda la información relevante para el proceso de reclutamiento de un individuo. La plataforma incluye una presentación personal, un portafolio de proyectos, certificaciones obtenidas en plataformas como HackerRank y SoloLearn, así como una lista detallada de habilidades y competencias. Además, se ofrece una visión completa del perfil del colaborador, incluyendo su experiencia laboral y datos de contacto, todo disponible en dos idiomas: español e inglés.',
-            Image:'/src/assets/image/projects/portafolio.png'
+            Image:'/image/projects/portafolio.png'
         }
     ],
 EN:
