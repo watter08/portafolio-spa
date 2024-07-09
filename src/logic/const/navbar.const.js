@@ -9,7 +9,7 @@ export const NavbarInit = {
             {
                 IsDropDown: false,
                 Title: 'Hoja de Vida',
-                Link:`http://localhost:5173/src/assets/certificates/Watter Resume.pdf`,
+                Link:`/certificates/Watter Resume.pdf`,
                 Drops:[] 
              },
              {
@@ -30,7 +30,7 @@ export const NavbarInit = {
             {
                 IsDropDown: false,
                 Title: 'Resume',
-                Link:`http://localhost:5173/src/assets/certificates/Watter Resume.pdf`,
+                Link:`/certificates/Watter Resume.pdf`,
                 Drops:[] 
              },
              {
