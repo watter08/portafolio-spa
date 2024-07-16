@@ -20,8 +20,8 @@ export const WhoIAm = {
         TitleEng: 'watter08@hotmail.es'
     },
     Phone: {
-        Title: '829 912 3496', 
-        TitleEng: '829 912 3496'
+        Title: '809 912 3496', 
+        TitleEng: '809 912 3496'
     },
     Github: {
         Title: 'https://github.com/watter08', 
