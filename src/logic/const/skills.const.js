@@ -22,7 +22,9 @@ export const skillss = [
     "NestJS",
     "TypeScript",
     "JavaScript",
-    "React.js"
+    "React.js",
+    "Dart",
+    "Flutter"
 ];
 
 export const skills = {
