@@ -37,7 +37,11 @@ const EmblaCarousel = ({ slides, options }) => {
           {slides.map((slide ,index) => (
             <div className="embla__slide" key={index}>
               <h3 className="outfit-medium embla__slide__title">{slide?.Title}</h3>
-              <h4 className="outfit-medium embla__slide__subtitle">{slide?.SubTitle}</h4>
+              {String(slide.SubTitle).includes('http') ? <a 
+              className="outfit-medium embla__slide__subtitle" 
+              href={slide?.SubTitle} 
+              rel='noreferrer' target='_blank'>Conoce mas</a> : 
+                <h4 className="outfit-medium embla__slide__subtitle">{slide?.SubTitle}</h4>}
               <h6 className="outfit-medium embla__slide__details">{slide?.Details}</h6>
               <img className="embla__slide__img" src={slide?.Image} alt="" />
             </div>

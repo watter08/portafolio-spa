@@ -22,7 +22,9 @@ export const skillss = [
     "NestJS",
     "TypeScript",
     "JavaScript",
-    "React.js"
+    "React.js",
+    "Dart",
+    "Flutter"
 ];
 
 export const skills = {
@@ -53,6 +55,8 @@ export const skills = {
         { title: "TypeScript", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg" },
         { title: "JavaScript", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" },
         { title: "React.js", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" },
+        { title: "Dart", image: "https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/dart.svg" },
+        { title: "Flutter", image: "https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/flutter.svg" },
     ]
 },
     EN:{
@@ -82,6 +86,8 @@ export const skills = {
         { title: "TypeScript", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg" },
         { title: "JavaScript", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" },
         { title: "React.js", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" },
+        { title: "Dart", image: "https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/dart.svg" },
+        { title: "Flutter", image: "https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/flutter.svg" },
     ]
 }
 };
