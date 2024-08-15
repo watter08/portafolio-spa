@@ -69,7 +69,7 @@ export const AboutMeInfo = {
 
             },
             info:{
-                phone:'809 912 3496',
+                phone:'849 652 4484',
                 email:'watterdeaza@gmail.com',
                 linkdn:'https://www.linkedin.com/in/watter-de-aza-de-leon/',
                 github:'https://github.com/watter08',
@@ -147,7 +147,7 @@ export const AboutMeInfo = {
 
             },
             info:{
-                phone:'809 912 3496',
+                phone:'849 652 4484',
                 email:'watterdeaza@gmail.com',
                 linkdn:'https://www.linkedin.com/in/watter-de-aza-de-leon/',
                 github:'https://github.com/watter08',
